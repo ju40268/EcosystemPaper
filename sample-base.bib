@@ -1,0 +1,1574 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@Article{Freeman78centralityin,
+    author = {Linton C. Freeman},
+    title = {Centrality in social networks conceptual clarification},
+    journal = {Social Networks},
+    year = {1978},
+    pages = {215}
+}
+
+@Article{Freeman79centralityin,
+ ISSN = {00380431},
+ URL = {http://www.jstor.org/stable/3033543},
+ abstract = {A Family of new measures of point and graph centrality based on early intuitions of Bavelas (1948) is introduced. These measures define centrality in terms of the degree to which a point falls on the shortest path between others and therefore has a potential for control of communication. They may be used to index centrality in any large or small network of symmetrical relations, whether connected or unconnected.},
+ author = {Linton C. Freeman},
+ journal = {Sociometry},
+ number = {1},
+ pages = {35--41},
+ publisher = {[American Sociological Association, Sage Publications, Inc.]},
+ title = {A Set of Measures of Centrality Based on Betweenness},
+ volume = {40},
+ year = {1977}
+}
+
+
+@Article{Yin2006,
+title = "Connection and stratification in research collaboration: An analysis of the COLLNET network",
+journal = "Information Processing and Management",
+volume = "42",
+number = "6",
+pages = "1599 - 1613",
+year = "2006",
+note = "Special Issue on Informetrics",
+issn = "0306-4573",
+doi = "https://doi.org/10.1016/j.ipm.2006.03.021",
+url = "http://www.sciencedirect.com/science/article/pii/S0306457306000422",
+author = "Li-chun Yin and Hildrun Kretschmer and Robert A. Hanneman and Ze-yuan Liu",
+keywords = "Social network analysis, Cooperation network, Topological structure, Scale-free",
+abstract = "Co-authorship among scientists represents a prototype of a social network. By mapping the graph containing all relevant publications of members in an international collaboration network: COLLNET, we infer the structural mechanisms that govern the topology of this social system. The structure of the network affects the information available to individuals, and their opportunities to collaborate. The structure of the network also affects the overall flow of information, and the nature of the scientific community. We present a number of measures of both the macro- (whole-network) and micro- (actor-centered) structure of collaboration, and apply these to COLLNET. We find that this scientific community displays many aspects of a “small-world,” and is somewhat vulnerable to disruption should major figures become inactive. We also find inequality in the roles played by individuals in the network. The inequalities, however, do not create a closed and isolated “core” or elite."
+}
+
+@Article{Freidkin,
+ ISSN = {00029602, 15375390},
+ URL = {http://www.jstor.org/stable/2781908},
+ abstract = {Three measures of actors' network centrality are derived from an elementary rocess model of social influence. The measures are closely related to, and cast new light on, widely used measures of actors' centrality; for example, the essential social organization of status that has been assumed by Hubbell, Bonacich, Coleman, and Burt appears as a deducible outcome of this social influence process. Unlike previous measures, which have been viewed as competing alternatives, the present measures are complementary and, in their juxtaposition, provide for a rich description of social structure. The complementary indicates a degree of theoretical unification in the work on network centrality that was heretofore unsuspected.},
+ author = {Noah E. Friedkin},
+ journal = {American Journal of Sociology},
+ number = {6},
+ pages = {1478--1504},
+ publisher = {University of Chicago Press},
+ title = {Theoretical Foundations for Centrality Measures},
+ volume = {96},
+ year = {1991}
+}
+
+
+@Article{Bolland,
+title = "Sorting out centrality: An analysis of the performance of four centrality models in real and simulated networks",
+journal = "Social Networks",
+volume = "10",
+number = "3",
+pages = "233 - 253",
+year = "1988",
+issn = "0378-8733",
+doi = "https://doi.org/10.1016/0378-8733(88)90014-7",
+url = "http://www.sciencedirect.com/science/article/pii/0378873388900147",
+author = "John M. Bolland",
+abstract = "Although the concept of centrality has been well developed in the social networks literature, its empirical development has lagged somewhat. This paper moves a step in that direction by assessing the performance of four centrality models under a variety of known and controlled situations. It begins by examining the assumptions underlying each model, as well as its behavior in a community influence network. It then assesses the robustness and sensitivity of each model under conditions of random and systematic variation introduced into this network."
+}
+
+@article{Correlated,
+author = {Valente, Thomas and Coronges, Kathryn and Lakon, Cynthia and Costenbader, Elizabeth},
+year = {2008},
+month = {01},
+pages = {16-26},
+title = {How Correlated Are Network Centrality Measures?},
+volume = {28},
+journal = {Connections (Toronto, Ont.)}
+}
+
+@inproceedings{CorrelationCoefficient,
+author = {Meghanathan, Natarajan},
+year = {2015},
+month = {01},
+  booktitle={Computer Science On-line Conference},
+pages = {11-20},
+title = {Correlation Coefficient Analysis of Centrality Metrics for Complex Network Graphs},
+isbn = {978-3-319-18502-6},
+doi = {10.1007/978-3-319-18503-3_2}
+}
+
+
+@online{Harrell,
+  author =       "Harrell, Erika",
+  year =         "2016",
+  title =        "Victims of Identity Thef, 2016",
+  url =          "https://www.bjs.gov/content/pub/pdf/vit16.pdf",
+  month =        mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+
+@online{Verizon,
+  author =       "Verizon",
+  year =         "2018",
+  title =        "2018 Data Breach Investigations Report",
+  url =          "https://enterprise.verizon.com/resources/reports/2018/DBIR_2018_Report_execsummary.pdf",
+  month =        mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+@online{Gemalto,
+  author =       "Gemalto",
+  year =         "2016",
+  title =        "Mining for Database Gold: Findings from the 2016 Breach Level Index",
+  url =          "https://www.breachlevelindex.com/assets/Breach-Level-Index-Report-2016-Gemalto.pdf",
+  month =        mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+@article{ITAP,
+    title = "Modeling and analysis of identity threat behaviors through text mining of identity theft stories",
+    journal = "Computers and Security",
+    volume = "65",
+    pages = "50 - 63",
+    year = "2017",
+    issn = "0167-4048",
+    doi = "https://doi.org/10.1016/j.cose.2016.11.002",
+    url = "http://www.sciencedirect.com/science/article/pii/S0167404816301559",
+    author = "Razieh Nokhbeh Zaeem and Monisha Manoharan and Yongpeng Yang and K. Suzanne Barber",
+    keywords = "Identity theft, Text mining, News stories, PII attributes, Named entity recognition",
+    abstract = "Identity theft, fraud, and abuse are problems affecting the entire society. Identity theft is often a “gateway” crime, as criminals use stolen or fraudulent identities to steal money, claim eligibility for services, hack into networks without authorization, and so on. The available data describing identity crimes and their aftermath are often in the form of recorded stories and reports by the news press, fraud examiners, and law enforcement. All of these sources are unstructured. In order to analyze identity theft data, this research proposes an approach which involves the novel collection of online news stories and reports on the topic of identity theft. Our approach pre-processes the raw text and extracts semi-structured information automatically, using text mining techniques. This paper presents statistical analysis of behavioral patterns and resources used by thieves and fraudsters to commit identity theft, including the identity attributes commonly linked to identity crimes, resources thieves employ to conduct identity crimes, and temporal patterns of criminal behavior. Furthermore, the automatically extracted information is validated against manually investigated news stories. Analyses of these results increase empirical understanding of identity threat behaviors, offer early warning signs of identity theft, and thwart future identity theft crimes."
+}
+
+@INPROCEEDINGS{EcosystemModeling, 
+author={R. N. {Zaeem} and S. {Budalakoti} and K. S. {Barber} and M. {Rasheed} and C. {Bajaj}}, 
+booktitle={2016 IEEE International Carnahan Conference on Security Technology (ICCST)}, 
+title={Predicting and explaining identity risk, exposure and cost using the ecosystem of identity attributes}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={1-8}, 
+keywords={belief networks;graph theory;Markov processes;Monte Carlo methods;security of data;identity risk;identity exposure;identity attributes ecosystem;personally identifiable information attributes;PII attribute;graph node;graph edges;identity ecosystem model;Bayesian belief network;Gibbs sampling;identity theft;fraud;Ecosystems;Authentication;Mathematical model;Organizations;Probabilistic logic;Bayes methods}, 
+doi={10.1109/CCST.2016.7815701}, 
+ISSN={2153-0742}, 
+month={Oct},}
+
+@INPROCEEDINGS{Tarjan, 
+author={R. {Tarjan}}, 
+booktitle={12th Annual Symposium on Switching and Automata Theory (swat 1971)}, 
+title={Depth-first search and linear graph algorithms}, 
+year={1971}, 
+volume={}, 
+number={}, 
+pages={114-121}, 
+keywords={Tree graphs;Computer science;Tail;Chemistry;Electrical engineering;Sociology;Information retrieval;TV;Erbium}, 
+doi={10.1109/SWAT.1971.10}, 
+ISSN={0272-4847}, 
+month={Oct},}
+
+@online{Donglei,
+  author =       "Donglei Du",
+  year =         "2019",
+  title =        "Social Network Analysis: Centrality Measures",
+  url =          "http://www2.unb.ca/~ddu/6634/Lecture_notes/Lecture_4_centrality_measure.pdf",
+  month =        mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+@online{FTC,
+  author =       "Federal Trade Commission (FTC)",
+  year =         "2016",
+  title =        "2016. Consumer Sentinel Network Data Book for
+January to December 2016",
+  url =          "https://www.ftc.gov/system/files/documents/reports/consumer-sentinel-network-data-book-january-december-2016/csn_cy-2016_data_book.pdf",
+  month =        Mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+@online{USGAO,
+  author =       "USGAO",
+  year =         "2017",
+  title =        "2017.Services Offer Some Benefits but Are Limited in Preventing Fraud",
+  url =          "https://www.gao.gov/assets/690/683842.pdf",
+  month =        Mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+@online{Pascual,
+  author =       "Pascual, Al, Kyle Marchini, and Sarah Miller",
+  year =         "2018",
+  title =        "2018 Identity Fraud: Fraud Enters a New Era of Complexity",
+  url =          "https://www.javelinstrategy.com/coverage-area/2018-identity-fraud-fraud-enters-new-era-complexity",
+  month =        Mar,
+  lastaccessed = "Apr 27, 2019",
+}
+
+
+
+
+@Article{ITAPDataSource,
+    author = {Zaiss, Jim and Nokhbeh Zaeem, Razieh and Barber, K. Suzanne},
+    title = {Identity Threat Assessment and Prediction},
+    journal = {Journal of Consumer Affairs},
+    volume = {53},
+    number = {1},
+    pages = {58-70},
+    doi = {10.1111/joca.12191},
+    url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/joca.12191},
+    eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/joca.12191},
+
+    year = {2019}
+}
+
+@Article{Copes,
+    author = {Heith Copes and Lynne M. Vieraitis},
+    title ={Understanding Identity Theft: Offenders' Accounts of Their Lives and Crimes},
+    journal = {Criminal Justice Review},
+    volume = {34},
+    number = {3},
+    pages = {329-349},
+    year = {2009},
+    doi = {10.1177/0734016808330589},
+    
+    URL = { 
+            https://doi.org/10.1177/0734016808330589
+        
+    },
+    eprint = { 
+            https://doi.org/10.1177/0734016808330589
+        
+    }
+    ,
+        abstract = { Researchers typically label acts as “white-collar” based on the respectable status of the offender (populist perspective) or on the characteristics of the offense (patrician perspective). However, some crimes, such as identity theft are not easily classified into either of these categories. The current study is designed to contextualize previous research and to situate the crime of identity theft within these two broad perspectives of white-collar crime. To do this, 59 identity thieves incarcerated in federal prisons were interviewed to offer the offenders’ perspectives on existing research describing characteristics of thieves and the techniques they employ to complete their crimes. Results show that identity thieves are a diverse group in terms of demographic characteristics (age, race, gender, and social class), employment, and criminal histories. They employed a variety of methods to both acquire information and convert it to cash. The most common methods of acquiring information were to buy it from others or to steal it from mailboxes or trashcans. They also used numerous methods to convert these identities into valuable goods, which included accessing existing accounts, applying for new credit, and obtaining loans. Thus, the findings show that identity theft is difficult to classify as white-collar crime. }
+}
+
+
+@Article{Allison,
+    title = "Exploring the crime of identity theft: Prevalence, clearance rates, and victim/offender characteristics",
+    journal = "Journal of Criminal Justice",
+    volume = "33",
+    number = "1",
+    pages = "19 - 29",
+    year = "2005",
+    issn = "0047-2352",
+    doi = "https://doi.org/10.1016/j.jcrimjus.2004.10.007",
+    url = "http://www.sciencedirect.com/science/article/pii/S0047235204001175",
+    author = "Stuart F.H. Allison and Amie M. Schuck and Kim Michelle Lersch",
+    abstract = "Although the crime of identity theft has garnered a great deal of media attention, relatively little empirical research existed on the prevalence of the crime, its clearance rate by arrest, or the demographic characteristics of the victims and the identifiable offenders. The purpose of this article is to expand the knowledge of this growing crime. Using data from a large municipal police department located in Florida as a database, the findings suggested that the number of reported incidents of identity theft appeared to be growing at a greater rate than other theft-related offenses and the clearance rate for identity theft appeared to be declining. The typical apprehended offender was African American, female, unemployed, working alone, and was unknown to the victims, who tended to be White and male."
+}
+
+
+
+
+
+
+
+@article{Reyns,
+author = {Bradford W. Reyns},
+title ={Online Routines and Identity Theft Victimization: Further Expanding Routine Activity Theory beyond Direct-Contact Offenses},
+journal = {Journal of Research in Crime and Delinquency},
+volume = {50},
+number = {2},
+pages = {216-238},
+year = {2013},
+doi = {10.1177/0022427811425539},
+
+URL = { 
+        https://doi.org/10.1177/0022427811425539
+    
+},
+eprint = { 
+        https://doi.org/10.1177/0022427811425539
+    
+}
+,
+    abstract = { Objectives: The purpose of the current study was to extend recent work aimed at applying routine activity theory to crimes in which the victim and offender never come into physical proximity. To that end, relationships between individuals' online routines and identity theft victimization were examined. Method: Data from a subsample of 5,985 respondents from the 2008 to 2009 British Crime Survey were analyzed. Utilizing binary logistic regression, the relationships between individuals' online routine activities (e.g., banking, shopping, downloading), individual characteristics (e.g., gender, age, employment), and perceived risk of victimization on identity theft victimization were assessed. Results: The results suggest that individuals who use the Internet for banking and/or e-mailing/instant messaging are about 50 percent more likely to be victims of identity theft than others. Similarly, online shopping and downloading behaviors increased victimization risk by about 30 percent. Males, older persons, and those with higher incomes were also more likely to experience victimization, as were those who perceived themselves to be at greater risk of victimization. Conclusions: Although the routine activity approach was originally written to account for direct-contact offenses, it appears that the perspective also has utility in explaining crimes at a distance. Further research should continue to explore the online and offline routines that increase individuals' risks of identity theft victimization. }
+}
+
+
+
+
+
+
+
+@article{Pratt,
+author = {Travis C. Pratt and Kristy Holtfreter and Michael D. Reisig},
+title ={Routine Online Activity and Internet Fraud Targeting: Extending the Generality of Routine Activity Theory},
+journal = {Journal of Research in Crime and Delinquency},
+volume = {47},
+number = {3},
+pages = {267-296},
+year = {2010},
+doi = {10.1177/0022427810365903},
+
+URL = { 
+        https://doi.org/10.1177/0022427810365903
+    
+},
+eprint = { 
+        https://doi.org/10.1177/0022427810365903
+    
+}
+,
+    abstract = { Routine activity theory predicts that changes in legitimate opportunity structures (e.g., technology) can increase the convergence of motivated offenders and suitable targets in the absence of capable guardianship. The Internet has fundamentally changed consumer practices and has simultaneously expanded opportunities for cyber-fraudsters to target online consumers. The authors draw on routine activity theory and consumer behavior research to understand how personal characteristics and online routines increase people’s exposure to motivated offenders. Using a representative sample of 922 adults from a statewide survey in Florida, the results of the regression models are consistent with prior research in that sociodemographic characteristics shape routine online activity (e.g., spending time online and making online purchases). Furthermore, indicators of routine online activity fully mediate the effect of sociodemographic characteristics on the likelihood of being targeted for fraud online. These findings support the routine activity perspective and provide a theoretically informed direction for situational crime prevention in a largely unexplored consumer context. }
+}
+
+
+@Article{Choo,
+title = "The cyber threat landscape: Challenges and future research directions",
+journal = "Computers and Security",
+volume = "30",
+number = "8",
+pages = "719 - 731",
+year = "2011",
+issn = "0167-4048",
+doi = "https://doi.org/10.1016/j.cose.2011.08.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0167404811001040",
+author = "Kim-Kwang Raymond Choo",
+keywords = "Culture of security, Cyber crime, Cyber exploitation, Policing and preventative strategy, Public private partnership, Routine Activity Theory",
+abstract = "Cyber threats are becoming more sophisticated with the blending of once distinct types of attack into more damaging forms. Increased variety and volume of attacks is inevitable given the desire of financially and criminally-motivated actors to obtain personal and confidential information, as highlighted in this paper. We describe how the Routine Activity Theory can be applied to mitigate these risks by reducing the opportunities for cyber crime to occur, making cyber crime more difficult to commit and by increasing the risks of detection and punishment associated with committing cyber crime. Potential research questions are also identified."
+}
+
+
+@inproceedings{Cherivirala2016VisualizationAI,
+  title={Visualization and Interactive Exploration of Data Practices in Privacy Policies},
+  author={S.K. Cherivirala and F. Schaub and M.S. Andersen and S. Wilson and N. Sadeh and J.R. Reidenberg},
+  booktitle = {Symposium on Usable Privacy and
+Security},
+  year={2016}
+}
+
+@article{FaithCranor2011,
+  title={Platform for Privacy Preferences (P3P)},
+  author={Faith Cranor, Lorrie},
+  journal={Encyclopedia of Cryptography and Security},
+  pages={940--941},
+  year={2011},
+  publisher={Springer},
+    isbn="978-1-4419-5906-5",
+    doi="10.1007/978-1-4419-5906-5_759",
+    url="https://doi.org/10.1007/978-1-4419-5906-5_759"
+}
+
+
+@inproceedings{ExpandableGrid,
+author = {W. Reeder, Robert and Kelley, Patrick and M. McDonald, Aleecia and Cranor, Lorrie},
+year = {2009},
+month = {01},
+title = {A user study of the expandable grid applied to P3P privacy policy visualization},
+  booktitle={Proceedings of the 7th ACM workshop on Privacy in the electronic society},
+    pages={45--54},
+doi = {10.1145/1456403.1456413}
+}
+
+
+@Article{Prisimos,
+author = {Vaniea, Kami and Ni, Qun and Cranor, Lorrie and Bertino, Elisa},
+year = {2019},
+month = {04},
+journal = {SOUPS Workshop (USM)},
+pages = {},
+title = {Access control policy analysis and visualization tools for security professionals}
+}
+
+@online{Ablamowicz07,
+  author =       "Rafal Ablamowicz and Bertfried Fauser",
+  year =         "2007",
+  title =        "CLIFFORD: a Maple 11 Package for Clifford Algebra Computations, version 11",
+  url =          "http://math.tntech.edu/rafal/cliff11/index.html",
+  lastaccessed = "February 28, 2008",
+}
+
+
+@misc{Poker06,
+  author =       "Poker-Edge.Com",
+  year =         "2006",
+  month =        mar,
+  title =        "Stats and Analysis",
+  lastaccessed = "June 7, 2006",
+  url =          "http://www.poker-edge.com/stats.php",
+}
+
+@misc{Obama08,
+  author        = "Barack Obama",
+  year          = "2008",
+  title         = "A more perfect union",
+  howpublished  = "Video",
+  day           = "5",
+  url           = "http://video.google.com/videoplay?docid=6528042696351994555",
+  month         = mar,
+  lastaccessed  = "March 21, 2008",
+  note          =  "",
+}
+
+@misc{JoeScientist001,
+  author =       "Joseph Scientist",
+  year =         "2009",
+  title =        "The fountain of youth",
+  note =         "Patent No. 12345, Filed July 1st., 2008, Issued Aug. 9th., 2009",
+  url =          "",
+  howpublished = "",
+  month =        aug,
+  lastaccessed = "",
+}
+
+
+@Inproceedings{Novak03,
+  author =       "Dave Novak",
+  title =        "Solder man",
+  booktitle =    "ACM SIGGRAPH 2003 Video Review on Animation theater Program: Part I - Vol. 145 (July 27--27, 2003)",
+  year =         "2003",
+  publisher =    "ACM Press",
+  address =      "New York, NY",
+  pages =        "4",
+  month =        "March 21, 2008",
+  doi =          "99.9999/woot07-S422",
+  url =          "http://video.google.com/videoplay?docid=6528042696351994555",
+  note =         "",
+  howpublished = "Video",
+  editor =       "",
+  volume =       "",
+  number =       "",
+  series =       "",
+  organization = "",
+}
+
+
+@article{Lee05,
+  author =       "Newton Lee",
+  year =         "2005",
+  title =        "Interview with Bill Kinder: January 13, 2005",
+  journal =      "Comput. Entertain.",
+  eid =          "4",
+  volume =       "3",
+  number =       "1",
+  month =        "Jan.-March",
+  doi =          "10.1145/1057270.1057278",
+  url =          "http://doi.acm.org/10.1145/1057270.1057278",
+  howpublished = "Video",
+  note =         "",
+}
+
+@article{Rous08,
+  author =       "Bernard Rous",
+  year =         "2008",
+  title =        "The Enabling of Digital Libraries",
+  journal =      "Digital Libraries",
+  volume =       "12",
+  number =       "3",
+  month =        jul,
+  articleno =    "5",
+  doi =          "",
+  url =          "",
+  howpublished = "",
+  note =         "To appear",
+}
+
+@article{384253,
+ author = {Werneck,, Renato and Setubal,, Jo\~{a}o and da Conceic\~{a}o,, Arlindo},
+ title = {(old) Finding minimum congestion spanning trees},
+ journal = {J. Exp. Algorithmics},
+ volume = {5},
+ year = {2000},
+ issn = {1084-6654},
+ pages = {11},
+ doi = {http://doi.acm.org/10.1145/351827.384253},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+@article{Werneck:2000:FMC:351827.384253,
+ author = {Werneck, Renato and Setubal, Jo\~{a}o and da Conceic\~{a}o, Arlindo},
+ title = {(new) Finding minimum congestion spanning trees},
+ journal = {J. Exp. Algorithmics},
+ volume = {5},
+ month = dec,
+ year = {2000},
+ issn = {1084-6654},
+ articleno = {11},
+ url = {http://portal.acm.org/citation.cfm?id=351827.384253},
+ doi = {10.1145/351827.384253},
+ acmid = {384253},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@article{1555162,
+ author = {Conti, Mauro and Di Pietro, Roberto and Mancini, Luigi V. and Mei, Alessandro},
+ title = {(old) Distributed data source verification in wireless sensor networks},
+ journal = {Inf. Fusion},
+ volume = {10},
+ number = {4},
+ year = {2009},
+ issn = {1566-2535},
+ pages = {342--353},
+ doi = {http://dx.doi.org/10.1016/j.inffus.2009.01.002},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ }
+
+@article{Conti:2009:DDS:1555009.1555162,
+ author = {Conti, Mauro and Di Pietro, Roberto and Mancini, Luigi V. and Mei, Alessandro},
+ title = {(new) Distributed data source verification in wireless sensor networks},
+ journal = {Inf. Fusion},
+ volume = {10},
+ number = {4},
+ month = oct,
+ year = {2009},
+ issn = {1566-2535},
+ pages = {342--353},
+ numpages = {12},
+ url = {http://portal.acm.org/citation.cfm?id=1555009.1555162},
+ doi = {10.1016/j.inffus.2009.01.002},
+ acmid = {1555162},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ keywords = {Clone detection, Distributed protocol, Securing data fusion, Wireless sensor networks},
+}
+
+@inproceedings{Li:2008:PUC:1358628.1358946,
+ author = {Li, Cheng-Lun and Buyuktur, Ayse G. and Hutchful, David K. and Sant, Natasha B. and Nainwal, Satyendra K.},
+ title = {Portalis: using competitive online interactions to support aid initiatives for the homeless},
+ booktitle = {CHI '08 extended abstracts on Human factors in computing systems},
+ year = {2008},
+ isbn = {978-1-60558-012-X},
+ location = {Florence, Italy},
+ pages = {3873--3878},
+ numpages = {6},
+ url = {http://portal.acm.org/citation.cfm?id=1358628.1358946},
+ doi = {10.1145/1358628.1358946},
+ acmid = {1358946},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {cscw, distributed knowledge acquisition, incentive design, online games, recommender systems, reputation systems, user studies, virtual community},
+}
+
+@book{Hollis:1999:VBD:519964,
+ author = {Hollis, Billy S.},
+ title = {Visual Basic 6: Design, Specification, and Objects with Other},
+ year = {1999},
+ isbn = {0130850845},
+ edition = {1st},
+ publisher = {Prentice Hall PTR},
+ address = {Upper Saddle River, NJ, USA},
+ }
+
+
+@book{Goossens:1999:LWC:553897,
+ author = {Goossens, Michel and Rahtz, S. P. and Moore, Ross and Sutor, Robert S.},
+ title = {The  Latex Web Companion: Integrating TEX, HTML, and XML},
+ year = {1999},
+ isbn = {0201433117},
+ edition = {1st},
+ publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+ address = {Boston, MA, USA},
+ }
+
+% need to test genres for errant isbn output
+
+% techreport
+@techreport{897367,
+ author = {Buss, Jonathan F. and Rosenberg, Arnold L. and Knott, Judson D.},
+ title = {Vertex Types in Book-Embeddings},
+ year = {1987},
+ source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Aumass_cs%3Ancstrl.umassa_cs%2F%2FUM-CS-1987-018},
+ publisher = {University of Massachusetts},
+ address = {Amherst, MA, USA},
+ }
+
+@techreport{Buss:1987:VTB:897367,
+ author = {Buss, Jonathan F. and Rosenberg, Arnold L. and Knott, Judson D.},
+ title = {Vertex Types in Book-Embeddings},
+ year = {1987},
+ source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Aumass_cs%3Ancstrl.umassa_cs%2F%2FUM-CS-1987-018},
+ publisher = {University of Massachusetts},
+ address = {Amherst, MA, USA},
+ }
+
+% whole proceedings
+
+@proceedings{Czerwinski:2008:1358628,
+ author = {},
+ note = {General Chair-Czerwinski, Mary and General Chair-Lund, Arnie and Program Chair-Tan, Desney},
+ title = {CHI '08: CHI '08 extended abstracts on Human factors in computing systems},
+ year = {2008},
+ isbn = {978-1-60558-012-X},
+ location = {Florence, Italy},
+ order_no = {608085},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+% phdthesis
+
+@phdthesis{Clarkson:1985:ACP:911891,
+ author = {Clarkson, Kenneth Lee},
+ advisor = {Yao, Andrew C.},
+ title = {Algorithms for Closest-Point Problems (Computational Geometry)},
+ year = {1985},
+ note = {AAT 8506171},
+ school = {Stanford University},
+ address = {Stanford, CA, USA},
+ }
+% school is being picked up -- but not publisher (which is OK)
+% Also -- the title is NOT being output in italics !!! Arrrrgh! - I fixed it. :-)
+
+
+%%% compare with 'old'
+%%% atsign-Phdthesis{Clarkson85,
+%%%  author =       "Kenneth L. Clarkson",
+%%%  year =         "1985",
+%%%  title =        "Algorithms for Closest-Point Problems (Computational Geometry)",
+%%%  school =       "Stanford University",
+%%%  address =      "Palo Alto, CA",
+%%%  note =         "UMI Order Number: AAT 8506171",
+%%%  type =         "",
+%%%  month =        "",
+%%%}
+
+% A bibliography
+@Article{1984:1040142,
+ key = {{$\!\!$}},
+ journal = {SIGCOMM Comput. Commun. Rev.},
+ year = {1984},
+ issn = {0146-4833},
+ volume = {13-14},
+ number = {5-1},
+ issue_date = {January/April 1984},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+% grinder
+@inproceedings{2004:ITE:1009386.1010128,
+ key = {IEEE},
+ title = {IEEE TCSC Executive Committee},
+ booktitle = {Proceedings of the IEEE International Conference on Web Services},
+ series = {ICWS '04},
+ year = {2004},
+ isbn = {0-7695-2167-3},
+ pages = {21--22},
+ url = {http://dx.doi.org/10.1109/ICWS.2004.64},
+ doi = {http://dx.doi.org/10.1109/ICWS.2004.64},
+ acmid = {1010128},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+}
+
+% div book
+@book{Mullender:1993:DS(:302430,
+ editor = {Mullender, Sape},
+ title = {Distributed systems (2nd Ed.)},
+ year = {1993},
+ isbn = {0-201-62427-3},
+ publisher = {ACM Press/Addison-Wesley Publishing Co.},
+ address = {New York, NY, USA},
+ }
+
+% master thesis (as techreport and thesis)
+
+@techreport{Petrie:1986:NAD:899644,
+ author = {Petrie, Charles J.},
+ title = {New Algorithms for Dependency-Directed Backtracking (Master's thesis)},
+ year = {1986},
+ source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Autexas_cs%3AUTEXAS_CS%2F%2FAI86-33},
+ publisher = {University of Texas at Austin},
+ address = {Austin, TX, USA},
+ }
+
+@MASTERSTHESIS{Petrie:1986:NAD:12345,
+ author = {Petrie, Charles J.},
+ title = {New Algorithms for Dependency-Directed Backtracking (Master's thesis)},
+ year = {1986},
+ source = {http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3Ancstrlh%3Autexas_cs%3AUTEXAS_CS%2F%2FAI86-33},
+ school = {University of Texas at Austin},
+ address = {Austin, TX, USA},
+ }
+
+
+
+
+@BOOK{book-minimal,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   publisher = "Addison-Wesley",
+   year = "1981",
+}
+
+% incollection (has an editor, title, and possibly a booktitle)
+@INcollection{KA:2001,
+ author = {Kong, Wei-Chang},
+ Title = {The implementation of electronic commerce in SMEs in Singapore (as Incoll)},
+ booktitle = {E-commerce and cultural values},
+ year = {2001},
+ isbn = {1-59140-056-2},
+ pages = {51--74},
+ numpages = {24},
+ url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+ acmid = {887010},
+ publisher = {IGI Publishing},
+ address = {Hershey, PA, USA},
+}
+
+
+% with bibfield 'type' before chapter (note no editor)
+@INBOOK{KAGM:2001,
+ author = {Kong, Wei-Chang},
+ type = {Name of Chapter:},
+ chapter = {The implementation of electronic commerce in SMEs in Singapore (Inbook-w-chap-w-type)},
+ title = {E-commerce and cultural values},
+ year = {2001},
+ isbn = {1-59140-056-2},
+ pages = {51--74},
+ numpages = {24},
+ url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+ acmid = {887010},
+ publisher = {IGI Publishing},
+ address = {Hershey, PA, USA},
+}
+
+%%% Notes! This is because the atsign-INBOOK citation type specifies EITHER
+%%% editor or author, but not both. In my experiments with the harvard/dcu
+%%% bibtex style (and presumably this applies to other styles too), bibtex
+%%% ignores the editor information if author information exists in an
+%%% atsign-INBOOK entry. atsign-INCOLLECTION is far more commonly used in my references,
+%%% and in the absence of an editor I believe most bibtex styles will just
+%%% ommit the editor from the reference - the chapter information will not
+%%% end up in the in-text citation as you suggest it should be but at least
+%%% there is a place to put the editor if necessary.
+
+
+
+% was 'Inbook' -- changed to incollection - (editor is different to author) - need to tell Asad to codify as such.
+@incollection{Kong:2002:IEC:887006.887010,
+  author =      {Kong, Wei-Chang},
+  editor =      {Theerasak Thanasankit},
+  title =       {Chapter 9},
+  booktitle =   {E-commerce and cultural values (Incoll-w-text (chap 9) 'title')},
+  year =        {2002},
+  address =     {Hershey, PA, USA},
+  publisher =   {IGI Publishing},
+  url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+  pages =       {51--74},
+  numpages =    {24},
+  acmid =       {887010},
+  isbn =        {1-59140-056-2},
+  number =      "",
+  type =        "",
+  month =       "",
+  note =        "",
+}
+
+% incol when the chapter is 'text' - due to presence of editor (different to author)
+@incollection{Kong:2003:IEC:887006.887011,
+ author = {Kong, Wei-Chang},
+ title = {The implementation of electronic commerce in SMEs in Singapore (Incoll)},
+ booktitle = {E-commerce and cultural values},
+ editor = {Thanasankit, Theerasak},
+ year = {2003},
+ isbn = {1-59140-056-2},
+ pages = {51--74},
+ numpages = {24},
+ url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+ acmid = {887010},
+ publisher = {IGI Publishing},
+ address = {Hershey, PA, USA},
+}
+
+% ------ test
+%incollection{Kong:2003:IEC:887006.887010,
+% author = {Kong, Wei-Chang},
+% chapter = {The implementation of electronic commerce in SMEs in Singapore (Incoll-text-in-chap)},
+% booktitle = {booktitle E-commerce and cultural values},
+% title =   {The title},
+% editor = {Thanasankit, Theerasak},
+% year = {2003},
+% isbn = {1-59140-056-2},
+% pages = {51--74},
+% numpages = {24},
+% url = {http://portal.acm.org/citation.cfm?id=887006.887010},
+% acmid = {887010},
+% publisher = {IGI Publishing},
+% address = {Hershey, PA, USA},
+%}
+
+
+% ---------
+
+
+
+
+
+% Need inbook with num in chapter
+
+% and inbook with number in chapter
+@InBook{Kong:2004:IEC:123456.887010,
+  author =      {Kong, Wei-Chang},
+  editor =      {Theerasak Thanasankit},
+  title =       {E-commerce and cultural values - (InBook-num-in-chap)},
+  chapter =     {9},
+  year =        {2004},
+  address =     {Hershey, PA, USA},
+  publisher =   {IGI Publishing},
+  url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+  pages =       {51--74},
+  numpages =    {24},
+  acmid =       {887010},
+  isbn =        {1-59140-056-2},
+  number =      "",
+  type =        "",
+  month =       "",
+  note =        "",
+}
+
+
+% and inbook with text in chapter
+@Inbook{Kong:2005:IEC:887006.887010,
+  author =      {Kong, Wei-Chang},
+  editor =      {Theerasak Thanasankit},
+  title =       {E-commerce and cultural values (Inbook-text-in-chap)},
+  chapter =     {The implementation of electronic commerce in SMEs in Singapore},
+  year =        {2005},
+  address =     {Hershey, PA, USA},
+  publisher =   {IGI Publishing},
+  url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+  type =        {Chapter:},
+  pages =       {51--74},
+  numpages =    {24},
+  acmid =       {887010},
+  isbn =        {1-59140-056-2},
+  number =      "",
+  month =       "",
+  note =        "",
+}
+
+
+% and inbook with a num and type field
+@Inbook{Kong:2006:IEC:887006.887010,
+  author =      {Kong, Wei-Chang},
+  editor =      {Theerasak Thanasankit},
+  title =       {E-commerce and cultural values (Inbook-num chap)},
+  chapter =     {22},
+  year =        {2006},
+  address =     {Hershey, PA, USA},
+  publisher =   {IGI Publishing},
+  url =         {http://portal.acm.org/citation.cfm?id=887006.887010},
+  type =        {Chapter (in type field)},
+  pages =       {51--74},
+  numpages =    {24},
+  acmid =       {887010},
+  isbn =        {1-59140-056-2},
+  number =      "",
+  month =       "",
+  note =        "",
+}
+
+
+% and incol coz we have a BLANK chapter - due to presence of editor
+%atIncollection{Kong:2006:IEC:887006.887011,
+%  author =     {Kong, Wei-Chang},
+%  editor =     {Theerasak Thanasankit},
+%  title =      "The title"
+%  booktitle =  {E-commerce and cultural values (Incol-coz-blank-chap)},
+%  year =       {2006},
+%  address =    {Hershey, PA, USA},
+%  publisher =  {IGI Publishing},
+%  url =        {http://portal.acm.org/citation.cfm?id=887006.887010},
+%  type =       {Type!},
+%  chapter =    {},
+%  pages =      {51--74},
+%  numpages =   {24},
+%  acmid =      {887010},
+%  isbn =       {1-59140-056-2},
+%  number =     "",
+%  month =      "",
+%  note =       "",
+%}
+
+@article{SaeediMEJ10,
+            author = {Mehdi Saeedi and Morteza Saheb Zamani and Mehdi Sedighi},
+            title = {A library-based synthesis methodology for reversible logic},
+            journal = {Microelectron. J.},
+            volume = {41},
+            number = {4},
+            month = apr,
+            year = {2010},
+            pages = {185--194},
+}
+
+@ARTICLE{SaeediJETC10,
+            author = {Mehdi Saeedi and Morteza Saheb Zamani and Mehdi Sedighi and Zahra Sasanian},
+            title = {Synthesis of Reversible Circuit Using Cycle-Based Approach},
+            journal = {J. Emerg. Technol. Comput. Syst.},
+            volume = {6},
+            number = {4},
+            month = dec,
+            year = {2010}
+            }
+
+% Asad's new version
+@article{Kirschmer:2010:AEI:1958016.1958018,
+ author = {Kirschmer, Markus and Voight, John},
+ title = {Algorithmic Enumeration of Ideal Classes for Quaternion Orders},
+ journal = {SIAM J. Comput.},
+ issue_date = {January 2010},
+ volume = {39},
+ number = {5},
+ month = jan,
+ year = {2010},
+ issn = {0097-5397},
+ pages = {1714--1747},
+ numpages = {34},
+ url = {http://dx.doi.org/10.1137/080734467},
+ doi = {https://doi.org/10.1137/080734467},
+ acmid = {1958018},
+ publisher = {Society for Industrial and Applied Mathematics},
+ address = {Philadelphia, PA, USA},
+ keywords = {ideal classes, maximal orders, number theory, quaternion algebras},
+}
+
+
+% incol due to presence of booktitle
+@incollection{Hoare:1972:CIN:1243380.1243382,
+ author = {Hoare, C. A. R.},
+ title = {Chapter II: Notes on data structuring},
+ booktitle = {Structured programming (incoll)},
+ editor = {Dahl, O. J. and Dijkstra, E. W. and Hoare, C. A. R.},
+ year = {1972},
+ isbn = {0-12-200550-3},
+ pages = {83--174},
+ numpages = {92},
+ url = {http://portal.acm.org/citation.cfm?id=1243380.1243382},
+ acmid = {1243382},
+ publisher = {Academic Press Ltd.},
+ address = {London, UK, UK},
+}
+
+% incol due to presence of booktitle
+@incollection{Lee:1978:TQA:800025.1198348,
+ author = {Lee, Jan},
+ title = {Transcript of question and answer session},
+ booktitle = {History of programming languages I (incoll)},
+ editor = {Wexelblat, Richard L.},
+ year = {1981},
+ isbn = {0-12-745040-8},
+ pages = {68--71},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/800025.1198348},
+ doi = {http://doi.acm.org/10.1145/800025.1198348},
+ acmid = {1198348},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+% incol due to booktitle
+@incollection{Dijkstra:1979:GSC:1241515.1241518,
+ author = {Dijkstra, E.},
+ title = {Go to statement considered harmful},
+ booktitle = {Classics in software engineering (incoll)},
+ year = {1979},
+ isbn = {0-917072-14-6},
+ pages = {27--33},
+ numpages = {7},
+ url = {http://portal.acm.org/citation.cfm?id=1241515.1241518},
+ acmid = {1241518},
+ publisher = {Yourdon Press},
+ address = {Upper Saddle River, NJ, USA},
+}
+
+% incol due to booktitle
+@incollection{Wenzel:1992:TVA:146022.146089,
+ author = {Wenzel, Elizabeth M.},
+ title = {Three-dimensional virtual acoustic displays},
+ booktitle = {Multimedia interface design (incoll)},
+ year = {1992},
+ isbn = {0-201-54981-6},
+ pages = {257--288},
+ numpages = {32},
+ url = {http://portal.acm.org/citation.cfm?id=146022.146089},
+ doi = {10.1145/146022.146089},
+ acmid = {146089},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+% incol due to booktitle
+@incollection{Mumford:1987:MES:54905.54911,
+ author = {Mumford, E.},
+ title = {Managerial expert systems and organizational change: some critical research issues},
+ booktitle = {Critical issues in information systems research (incoll)},
+ year = {1987},
+ isbn = {0-471-91281-6},
+ pages = {135--155},
+ numpages = {21},
+ url = {http://portal.acm.org/citation.cfm?id=54905.54911},
+ acmid = {54911},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+}
+
+@book{McCracken:1990:SSC:575315,
+ author = {McCracken, Daniel D. and Golden, Donald G.},
+ title = {Simplified Structured COBOL with Microsoft/MicroFocus COBOL},
+ year = {1990},
+ isbn = {0471514071},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+}
+
+% Let's include Boris / BBeeton entries  (multi-volume works)
+
+@book {MR781537,
+    AUTHOR = {H{\"o}rmander, Lars},
+     TITLE = {The analysis of linear partial differential operators. {III}},
+    SERIES = {Grundlehren der Mathematischen Wissenschaften [Fundamental
+              Principles of Mathematical Sciences]},
+    VOLUME = {275},
+      NOTE = {Pseudodifferential operators},
+PUBLISHER = {Springer-Verlag},
+   ADDRESS = {Berlin, Germany},
+      YEAR = {1985},
+     PAGES = {viii+525},
+      ISBN = {3-540-13828-5},
+   MRCLASS = {35-02 (35Sxx 47G05 58G15)},
+  MRNUMBER = {781536 (87d:35002a)},
+MRREVIEWER = {Min You Qi},
+}
+
+@book {MR781536,
+    AUTHOR = {H{\"o}rmander, Lars},
+     TITLE = {The analysis of linear partial differential operators. {IV}},
+    SERIES = {Grundlehren der Mathematischen Wissenschaften [Fundamental
+              Principles of Mathematical Sciences]},
+    VOLUME = {275},
+      NOTE = {Fourier integral operators},
+PUBLISHER = {Springer-Verlag},
+   ADDRESS = {Berlin, Germany},
+      YEAR = {1985},
+     PAGES = {vii+352},
+      ISBN = {3-540-13829-3},
+   MRCLASS = {35-02 (35Sxx 47G05 58G15)},
+  MRNUMBER = {781537 (87d:35002b)},
+MRREVIEWER = {Min You Qi},
+}
+
+%%%%%%%%%%%%%%%%%%%%%% Start of Aptara sample bib entries
+
+% acmsmall-sam.bib
+@InProceedings{Adya-01,
+  author        = {A. Adya and P. Bahl and J. Padhye and A.Wolman and L. Zhou},
+  title         = {A multi-radio unification protocol for {IEEE} 802.11 wireless networks},
+  booktitle     = {Proceedings of the IEEE 1st International Conference on Broadnets Networks (BroadNets'04)},
+  publisher     = "IEEE",
+  address       = "Los Alamitos, CA",
+  year          = {2004},
+  pages         = "210--217"
+}
+
+@article{Akyildiz-01,
+  author        = {I. F. Akyildiz and W. Su and Y. Sankarasubramaniam and E. Cayirci},
+  title         = {Wireless Sensor Networks: A Survey},
+  journal       = {Comm. ACM},
+  volume        = 38,
+  number        = "4",
+  year          = {2002},
+  pages         = "393--422"
+}
+
+@article{Akyildiz-02,
+  author        = {I. F. Akyildiz and T. Melodia and K. R. Chowdhury},
+  title         = {A Survey on Wireless Multimedia Sensor Networks},
+  journal       = {Computer Netw.},
+  volume        = 51,
+  number        = "4",
+  year          = {2007},
+  pages         = "921--960"
+}
+
+@InProceedings{Bahl-02,
+  author        = {P. Bahl and R. Chancre and J. Dungeon},
+  title         = {{SSCH}: Slotted Seeded Channel Hopping for Capacity Improvement in {IEEE} 802.11 Ad-Hoc Wireless Networks},
+  booktitle     = {Proceeding of the 10th International Conference on Mobile Computing and Networking (MobiCom'04)},
+  publisher     = "ACM",
+  address       = "New York, NY",
+  year          = {2004},
+  pages         = "112--117"
+}
+
+@misc{CROSSBOW,
+  key       = {CROSSBOW},
+  title     = {{XBOW} Sensor Motes Specifications},
+  note      = {http://www.xbow.com},
+  year      = 2008
+}
+
+@article{Culler-01,
+  author        = {D. Culler and D. Estrin and M. Srivastava},
+  title         = {Overview of Sensor Networks},
+  journal       = {IEEE Comput.},
+  volume        = 37,
+  number        = "8 (Special Issue on Sensor Networks)",
+  publisher     = "IEEE",
+  address       = "Los Alamitos, CA",
+  year          = {2004},
+  pages         = "41--49"
+}
+
+@misc{Harvard-01,
+    key         = {Harvard CodeBlue},
+    title       = {{CodeBlue}: Sensor Networks for Medical Care},
+    note        = {http://www.eecs.harvard.edu/mdw/ proj/codeblue/},
+    year        = 2008
+}
+
+@InProceedings{Natarajan-01,
+    author      = {A. Natarajan and M. Motani and B. de Silva and K. Yap and K. C. Chua},
+    title       = {Investigating Network Architectures for Body Sensor Networks},
+    booktitle   = {Network Architectures},
+    editor      = {G. Whitcomb and P. Neece},
+    publisher   = "Keleuven Press",
+    address     = "Dayton, OH",
+    year        = {2007},
+    pages       = "322--328",
+    eprint      = "960935712",
+    primaryclass = "cs",
+}
+
+@techreport{Tzamaloukas-01,
+  author        = {A. Tzamaloukas and J. J. Garcia-Luna-Aceves},
+  title         = {Channel-Hopping Multiple Access},
+  number =        {I-CA2301},
+  institution =   {Department of Computer Science, University of California},
+  address =       {Berkeley, CA},
+  year          = {2000}
+}
+
+@BOOK{Zhou-06,
+  author        = {G. Zhou and J. Lu and C.-Y. Wan and M. D. Yarvis and J. A. Stankovic},
+  title         = {Body Sensor Networks},
+  publisher     = "MIT Press",
+  address       = "Cambridge, MA",
+  year          = {2008}
+}
+
+@mastersthesis{ko94,
+author = "Jacob Kornerup",
+title = "Mapping Powerlists onto Hypercubes",
+school = "The University of Texas at Austin",
+note = "(In preparation)",
+year = "1994"}
+%month = "dec",}
+
+@PhdThesis{gerndt:89,
+  author =       "Michael Gerndt",
+  title =        "Automatic Parallelization for Distributed-Memory
+                  Multiprocessing Systems",
+  school =       "University of Bonn",
+  year =         1989,
+  address =      "Bonn, Germany",
+  month =        dec
+}
+
+@article{6:1:1,
+author = "J. E. {Archer, Jr.} and R. Conway and F. B. Schneider",
+title = "User recovery and reversal in interactive systems",
+journal = "ACM Trans. Program. Lang. Syst.",
+volume =  "6",
+number = "1",
+month = jan,
+year = 1984,
+pages = "1--19"}
+
+@article{7:1:137,
+author = "D. D. Dunlop and V. R. Basili",
+title = "Generalizing specifications for uniformly implemented loops",
+journal = "ACM Trans. Program. Lang. Syst.",
+volume =  "7",
+number = "1",
+month = jan,
+year = 1985,
+pages = "137--158"}
+
+@article{7:2:183,
+author = "J. Heering and P. Klint",
+title = "Towards monolingual programming environments",
+journal = "ACM Trans. Program. Lang. Syst.",
+volume =  "7",
+number = "2",
+month = apr,
+year = 1985,
+pages = "183--213"}
+
+@book{knuth:texbook,
+author = "Donald E. Knuth",
+title = "The {\TeX{}book}",
+publisher = "Addison-Wesley",
+address = "Reading, MA.",
+year = 1984}
+
+@article{6:3:380,
+author = "E. Korach and D.  Rotem and N. Santoro",
+title = "Distributed algorithms for finding centers and medians in networks",
+journal = "ACM Trans. Program. Lang. Syst.",
+volume =  "6",
+number = "3",
+month = jul,
+year = 1984,
+pages = "380--401"}
+
+@book{lamport:latex,
+author = "Leslie Lamport",
+title = "\it {\LaTeX}: A Document Preparation System",
+publisher = "Addison-Wesley",
+address = "Reading, MA.",
+year = 1986}
+
+@article{7:3:359,
+author = "F. Nielson",
+title = "Program transformations in a denotational setting",
+journal = "ACM Trans. Program. Lang. Syst.",
+volume =  "7",
+number = "3",
+month = jul,
+year = 1985,
+pages = "359--379"}
+
+%testing
+@BOOK{test,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, MA",
+   edition = "2nd",
+   month = "10~" # jan,
+   year = "1981",
+}
+
+@inproceedings{reid:scribe,
+author = "Brian K. Reid",
+title = "A high-level approach to computer document formatting",
+booktitle = "Proceedings of the 7th Annual Symposium on Principles of
+  Programming Languages",
+month = jan,
+year = 1980,
+publisher = "ACM",
+address = "New York",
+pages = "24--31"}
+
+@article{Zhou:2010:MMS:1721695.1721705,
+ author = {Zhou, Gang and Wu, Yafeng and Yan, Ting and He, Tian and Huang, Chengdu and Stankovic, John A. and Abdelzaher, Tarek F.},
+ title = {A multifrequency MAC specially designed for wireless sensor network applications},
+ journal = {ACM Trans. Embed. Comput. Syst.},
+ issue_date = {March 2010},
+ volume = 9,
+ number = 4,
+ month = {April},
+ year = 2010,
+ issn = {1539-9087},
+ pages = {39:1--39:41},
+ articleno = 39,
+ numpages = 41,
+ url = {http://doi.acm.org/10.1145/1721695.1721705},
+ doi = {10.1145/1721695.1721705},
+ acmid = 1721705,
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Wireless sensor networks, media access control, multi-channel, radio interference, time synchronization},
+}
+
+
+@online{TUGInstmem,
+  key =          {TUG},
+  year  =        2017,
+  title =        "Institutional members of the {\TeX} Users Group",
+  url =          "http://wwtug.org/instmem.html",
+  lastaccessed = "May 27, 2017",
+}
+
+@online{CTANacmart,
+  author =    {Boris Veytsman},
+  title =  {acmart---{C}lass for typesetting publications of {ACM}},
+  url =    {http://www.ctan.org/pkg/acmart},
+  lastaccessed = {May 27, 2017}
+  }
+
+@ARTICLE{bowman:reasoning,
+    author = {Bowman, Mic and Debray, Saumya K. and Peterson, Larry L.},
+    title = {Reasoning About Naming Systems},
+    journal = {ACM Trans. Program. Lang. Syst.},
+    volume = {15},
+    number = {5},
+    pages = {795-825},
+    month = {November},
+    year = {1993},
+    doi = {10.1145/161468.161471},
+}
+
+@ARTICLE{braams:babel,
+    author = {Braams, Johannes},
+    title = {Babel, a Multilingual Style-Option System for Use with LaTeX's Standard Document Styles},
+    journal = {TUGboat},
+    volume = {12},
+    number = {2},
+    pages = {291-301},
+    month = {June},
+    year = {1991},
+}
+
+@INPROCEEDINGS{clark:pct,
+  AUTHOR = "Malcolm Clark",
+  TITLE = "Post Congress Tristesse",
+  BOOKTITLE = "TeX90 Conference Proceedings",
+  PAGES = "84-89",
+  ORGANIZATION = "TeX Users Group",
+  MONTH = "March",
+  YEAR = {1991}
+}
+
+@ARTICLE{herlihy:methodology,
+    author = {Herlihy, Maurice},
+    title = {A Methodology for Implementing Highly Concurrent Data Objects},
+    journal = {ACM Trans. Program. Lang. Syst.},
+    volume = {15},
+    number = {5},
+    pages = {745-770},
+    month = {November},
+    year = {1993},
+    doi = {10.1145/161468.161469},
+}
+
+@BOOK{salas:calculus,
+  AUTHOR = "S.L. Salas and Einar Hille",
+  TITLE = "Calculus: One and Several Variable",
+  PUBLISHER = "John Wiley and Sons",
+  ADDRESS = "New York",
+  YEAR = "1978"
+}
+
+@MANUAL{Fear05,
+  title =        {Publication quality tables in {\LaTeX}},
+  author =       {Simon Fear},
+  month =        {April},
+  year =         2005,
+  note =         {\url{http://www.ctan.org/pkg/booktabs}}
+}
+
+@Manual{Amsthm15,
+  title =        {Using the amsthm Package},
+  organization = {American Mathematical Society},
+  month =        {April},
+  year =         2015,
+  note =         {\url{http://www.ctan.org/pkg/amsthm}}
+}
