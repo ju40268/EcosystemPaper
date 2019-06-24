@@ -16,7 +16,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Statistical  Analysis  for  Identity  Risk,  Exposure  and  Cost  Using  the Ecosystem  of  Identity  Attributes
+\title{Statistical  Analysis  of  Identity  Risk of Exposure  and  Cost  Using  the Ecosystem  of  Identity  Attributes
 }
 
 % \author{\IEEEauthorblockN{1\textsuperscript{st} Chia-Ju Chen}
@@ -53,90 +53,96 @@
 \maketitle
 
 \begin{abstract}
-Personally Identifiable Information (PII) is often called the ``currency of Internet'' as identity assets are collected, shared, sold, and used for almost every transaction on the Internet.  PII is used for all types of applications from access control to credit score calculations to targeted advertising.  Every market sector relies on PII to know and authenticate their customers and their employees.   With so many businesses and government agencies relying on PII to make important decisions and so many people being asked to share personal data, it is critical to better understand the fundamentals of identity to protect it and responsibly use it.  Our comprehensive Identity Ecosystem utilizes graph theory to model PII assets and their relationships.  Powered by empirical data from almost 6,000 real-world identity theft and fraud news reports to populate the UT CID Identity Ecosystem, we report numerous novel statistics using identity asset content, structure, value, accessibility, and impact.  Our work sheds light on how identity is used and paves the way for improving identity.
+Personally Identifiable Information (PII) is often called the ``currency of Internet'' as identity assets are collected, shared, sold, and used for almost every transaction on the Internet.  PII is used for all types of applications from access control to credit score calculations to targeted advertising.  Every market sector relies on PII to know and authenticate their customers and their employees.   With so many businesses and government agencies relying on PII to make important decisions and so many people being asked to share personal data, it is critical to better understand the fundamentals of identity to protect it and responsibly use it.  Previously developed  comprehensive Identity Ecosystem utilizes graphs to model PII assets and their relationships and is powered by empirical data from almost 6,000 real-world identity theft and fraud news reports to populate the UT CID Identity Ecosystem. We obtained UT CID Identity Ecosystem from its authors to analyze using graph theory. We report numerous novel statistics using identity asset content, structure, value, accessibility, and impact.  Our work sheds light on how identity is used and paves the way for improving identity.
 \end{abstract}
 
 \begin{IEEEkeywords}
-security and privacy, identity theft, social network analysis, visualization
+security and privacy, identity theft, graph theory, social network measures,  visualization
 \end{IEEEkeywords}
 
 \section{Introduction}
- Personally identifiable information (PII) is any data that could potentially be used to recognize a particular person, and it is commonly used in both physical and cyber-security field to perform personal authentication. Identity theft is a fraudulent acquisition and usage without permission of a person's PII. Modern authentication process usually requires collection of PII and increases the risk of exposure to identity theft and fraud criminals.
+ Personally identifiable information (PII) is any data that could potentially be used to recognize a particular person, and it is commonly used in both physical and cyber spaces to perform personal authentication. Identity theft is the fraudulent acquisition and usage without permission of a person's PII. A modern authentication process usually requires collection of PII and increases the risk of exposure to identity theft and fraud criminals.
 
-In 2017, the number of identity fraud victims increased by 8\% rising to 16.7 million U.S. consumers. Fraudsters stole from 1.3 million more victims in 2017 stealing 16.8 billion from U.S. consumers \cite{Pascual}. More intelligent and comprehensive approach should be provided to thwart the collection of identity attributes to be compromised. 
-
-
-In order to model the identity ecosystem, the initiative approach is to analyze the components from both cyber and physical aspects. Modern society introduces seamlessly merge of cyber world for both online and offline attributes. Examples of on-line attributes are one's social media accounts, on-line shopping patterns, passwords, and email accounts. Off-line attributes are those related to the physical world such as bank accounts, credit and debit cards, Social Security Number, and one's physical characteristics.
-
- The UT CID Identity Ecosystem developed at the Center for Identity (CID) at the University of Texas (UT) at Austin constructed a graph-based model of people, devices, and organizations \cite{EcosystemModeling}. It models the relation as a Bayesian Network, performs interference for possible sources of breaches and cost if the source is compromised.
-It provides a framework for understanding the value, risk and mutual relationships for pairs of PII attributes. Each vertex represents an attribute whereas edges in-between implies the relationship.
-
-For data source of ecosystem, The Identity Threat Assessment and Prediction (ITAP) \cite{ITAPDataSource} project is leveraged. ITAP is our endeavor focused on gathering identity theft information from news stories, structuring this information, analyzing it, and discovering trends and characteristics.
+In 2017, the number of identity fraud victims increased by 8\% rising to 16.7 million U.S. consumers. Fraudsters stole from 1.3 million more victims in 2017 stealing a total of \$16.8 billion from U.S. consumers \cite{Pascual}. More intelligent and comprehensive approach should be provided to thwart the crime of identity theft.
 
 
-Based on the graph-based network of identity, we have designed and implemented a visualization framework that facilitates understanding of the whole risk network rather than reviewing unstructured raw news feed data from ITAP. We introduce three main statistical evaluation criteria: (1) Traditional pie, bar, and scatter plots of vertex or edge specific values are employed to show the distribution. (2) Centrality measures such as degree, closeness, and betweenness centrality are introduced and hence illustrate each PII with certain structural features. (3) Strongly Connected Components (SCC) is applied to distinguish groups of PII that are interconnected and accessible.  With these criteria, we can prototype the identity system with detailed features such as PII that are most efficient to spread the information if it is breached, or PII that are aggregated as a group that will easily be traversed if one member is already compromised. The main contribution of this paper includes the visual representation for the Ecosystem and three criteria for modeling the identity theft.  
+In order to model the identity ecosystem, an intuitive  approach is to analyze the components from both cyber and physical aspects. Modern society  seamlessly merges online and offline PII attributes. Examples of on-line attributes are one's social media accounts, on-line shopping patterns, passwords, and email accounts. Off-line attributes are those related to the physical world such as bank accounts, credit and debit cards, Social Security Number, and one's physical characteristics.
 
-The remainder of this article is structured as follow. Section II elaborates on the importance of statistical analysis of the Ecosystem tool and the set of measurement to be included. Section III presents a comprehensive evaluation and takeaways from the results. Section IV includes the related work of the identity ecosystem, identity theft, and related government reports. Section V concludes the research and gives insights for future work.
+ The UT CID Identity Ecosystem developed at the Center for Identity (CID) at the University of Texas (UT) at Austin constructed a graph-based model of people, devices, and organizations \cite{EcosystemModeling}. It models the relation as a Bayesian Network, and performs interference for possible sources of breaches and cost if the source is compromised.
+It provides a framework for understanding the value, risk and mutual relationships for pairs of PII attributes. Each vertex represents an attribute whereas edges in-between imply the relationship.
+
+For data source of ecosystem, The Identity Threat Assessment and Prediction (ITAP) \cite{ITAPDataSource} project is leveraged. ITAP is developed to focusing on gathering identity theft information from news stories, structuring this information, analyzing it, and discovering trends and characteristics.
+
+
+We obtained UT CID Identity Ecosystem and the ITAP data source from their authors. Based on this graph-based network of identity, we have designed and implemented a visualization framework that facilitates understanding of the whole risk network rather than reviewing unstructured raw news feed data from ITAP. We introduce three main statistical evaluation criteria: (1) Traditional pie, bar, and scatter plots of vertex or edge specific values are employed to show the distribution. (2) Centrality measures such as degree, closeness, and betweenness centrality are introduced and hence illustrate each PII with certain structural features. (3) Strongly Connected Components (SCC) are applied to distinguish groups of PII that are interconnected.  With these criteria, our visualization framework can prototype the identity system with detailed features such as PII that are most efficient to spread the information if breached, or PII that are aggregated as a group that will easily be traversed if one member is already compromised. The main contribution of this paper includes the visual representation for the Ecosystem and the three criteria for modeling the identity ecosystem.  
+
+The remainder of this article is structured as follow. Section II elaborates on the importance of statistical analysis of the Ecosystem tool and the set of measurements to be included. Section III presents a comprehensive evaluation and takeaways from the results. Section IV includes the related work of the identity ecosystem, identity theft, and related government reports. Section V concludes the research and gives insights for future work.
 
 \section{Statistics Based on Ecosystem}
 
- We have designed and implemented the Identity Ecosystem at the Center for Identity at the University of Texas at Austin as a valuable tool that models identity liaison, analyzes identity fraud and breaches, and answers several questions about identity risk management \cite{EcosystemModeling}. It maps identity attributes in a probabilistic model and performs Bayesian Network-based inference to determine the posterior effects on each attribute, and the individual identity attributes as nodes whereas edges in-between indicate various types of connections.
+The Identity Ecosystem is a valuable previously implemented tool that models identity liaison, analyzes identity fraud and breaches, and answers several questions about identity risk management \cite{EcosystemModeling}. It maps identity attributes in a probabilistic model and performs Bayesian network-based inference to determine the posterior effects on each attribute. The Identity Ecosystem models individual identity attributes as nodes whereas edges in-between indicate various types of connections.
  
-Each vertex includes different properties such as type of node, risk of exposure, and intrinsic monetary value. The Ecosystem Graphical User Interface (GUI) can color and size nodes based on their properties independently. Figure~\ref{fig:ecosystem_snapshot} shows an example snapshot in which the nodes are colored based on their risk of exposure and are sized based on their liability value.
+Each vertex includes different properties such as type of node, risk of exposure, and intrinsic monetary value. The Ecosystem Graphical User Interface (GUI) can color and size nodes based on their properties independently. Figure~\ref{fig:ecosystem_whole} shows an example snapshot in which the nodes are colored based on their risk of exposure and are sized based on their liability value.
 
 \begin{figure}[ht]
   \includegraphics[width=\linewidth]{ecosystem_snapshot.png}
-  \caption{A snapshot showing Ecosystem attribute graph.}
-  \label{fig:ecosystem_snapshot}
+  \caption{Background: A snapshot showing previously developed  UT CID Ecosystem attribute graph.}
+  \label{fig:ecosystem_whole}
 \end{figure}
 
- The research question we seek to answer in this paper is that "In a graph-based network of identity, what are the underlying characteristics? Are they forming a cluster? If so, what are the isolated PII nodes and connected ones?". We would also want to answer "Inside the network, which PII is the one with most authority over the whole, meanwhile which PII spread and control the information flow around the network most efficiently?". We further observe questions as: "In the PII graph, where is the PII located? Is it connected with lots of dangerous neighboring PII? Or is it placed on the boundary of a cluster?".
+ The research questions we seek to answer in this paper are that ``In a graph-based network of identity, what are the underlying characteristics? Are PII forming groups or clusters? If so, what are the isolated PII nodes and connected ones?''. We would also want to answer ``Inside the network, which PII is in the critical path of obtaining others most often and which PII can influence the acquisition of the other PII?''. We further observe questions such as: ``In the PII graph, where is the PII located? Is it connected with lots of dangerous neighboring PII? Or is it placed on the boundary of a cluster?''.
 
-We focus on three statistical indexes on the given data set: (1) Bar, pie, and distribution charts based on the node or edge value (2) Centrality measurement including node specific in, out-degree centrality, betweenness centrality, and closeness centrality and (3) Strongly connected  components of nodes for identifying clusters. Based on the result, a comprehensive inspection is reported on possible breaches with more local attributes, and flow of personal information inside the network modeling the real-world information movement. 
+We focus on three statistical indices on the given data set: (1) Bar, pie, and distribution charts based on the node or edge value (2) Centrality measurement including node specific in and out-degree centrality, betweenness centrality, and closeness centrality and (3) Strongly connected  components of nodes for identifying clusters. Based on the results, a comprehensive discussion is presented about possible breaches with more important attributes, and flow of personal information inside the network modeling the real-world information movement. 
 
 
 
 \section{Statistical Charts}
 
-We present sets of mathematical formula and statistical chart visualization in this section. The data source is from ITAP on Ecosystem, which contains 627 PII attributes in total. We divide the analysis based on edge or node specific properties. We represent the Identity Ecosystem as a graph $G(V, E)$ consisting of N attributes $A_{1}$, ...,$A_{N}$ and a set of directed edges as a tuple $e_{ij} = \langle i, j \rangle$ where $A_{i}$ is the originating node and $A_{j}$ is the target node such that $1 \leq i, j \leq N$. Each edge $e_{ij}$ represents a possible path by which $A_{j}$ can be breached given that $A_{i}$ is breached.
+We present sets of mathematical formula and statistical chart visualization in this section. The data source we used is from ITAP in Ecosystem, which contains 627 PII attributes in total. We divide the analyses based on edge or node specific properties. We represent the Identity Ecosystem as a graph $G(V, E)$ consisting of N attributes $A_{1}$, ...,$A_{N}$ and a set of directed edges as tuples $e_{ij} = \langle i, j \rangle$ where $A_{i}$ is the originating node and $A_{j}$ is the target node such that $1 \leq i, j \leq N$. Each edge $e_{ij}$ represents a possible path by which $A_{j}$ can be breached given that $A_{i}$ is breached. Each node $A_{j}$ is labeled with a Boolean random variable, denoted $D(A_{j})$, which is true if the attribute has been exposed and false otherwise. Each edge $e_{ij}$ represents a possible path by which $A_{j}$ can be breached given that $A_{i}$ is breached. For simplicity, we consider all edges to be independent. Therefore, we can assign conditional probabilities to each edge with $Prob(e_{ij}) = Prob(D(A_{j})|D(A_{i}))$.
 
 \subsection{Statistical charts based on edges}
-We implement the pie chart to observe the percentage for PII with/without outgoing edges or with/without incoming edges as shown in Figure~\ref{fig:pie_pii}. We can observe that 211 PII attributes are with incoming degrees, while 45 are with outgoing degrees. This leads to 33\% and 7\% connected ratio respectively.
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=5cm]{pie_PII.png}
-  \caption{A snapshot showing Pie chart for percentage of nodes with/without in/out degree.}
+We implement the pie chart to observe the percentage for PII with/without outgoing edges or with/without incoming edges as shown in Figure~\ref{fig:pie_pii}. We can observe that 211 PII attributes (33\%) are with incoming edges, while 45 (7\%) are with outgoing edges.
+
+{\bf Insight:} Only 7\% of PII have any effect on the risk of exposure of others and a total of 33\% could possibly be affected. The PII with outgoing edges should be carefully protected. The most important PII in this list are discussed shortly.
+
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{pie_PII.png}
+  \caption{A snapshot showing pie charts for percentage of nodes with/without in/out degree.}
   \label{fig:pie_pii}
 \end{figure}
 
- The Ecosystem predicts the risk (i.e., probability) of breach for a PII and a potential dollar value damage to the owner if a certain attribute is fraudulently used. We next focus on calculating degree centrality. 
- (Define What probability on the edge means)
- Furthermore, taking the probability on the edge into account, we extend the degree centrality from summing discrete edge count to accumulating risk.
-Degree centrality equals the number of links that a vertex has with other vertices(Cite). The equation for this measure is as follows, where $indegree(v_{i})$ and $outdegree(v_{i})$ symbols the degree of $v_{i}$: 
+% The Ecosystem predicts the risk (i.e., probability) of breach for a PII and a potential dollar value damage to the owner if a certain attribute is fraudulently used. We next focus on calculating degree centrality. 
+
+ Furthermore, taking the probability on the edges into account, we extend the degree centrality from summing discrete edge count to accumulating risk.
+Degree centrality equals the number of links that a vertex has with other vertices. The equation for this measure is as follows: 
 
 \begin{equation}
-C_{D_{out}} = outdegree(v_{i}), C_{D_{in}} = indegree(v_{i})
-\label{degree_centrality_equation}
+C_{D_{out}}(v_i) = outdegree(v_{i}) = |\{e_{ij}\}|
 \end{equation}
-
-if considering the weight on edge, this yields the equation:
 \begin{equation}
-C_{W_{out}} = Prob_{outdegree}(v_{i}), C_{W_{in}} = Prob_{indegree}(v_{i})
-\label{degree_centrality_with_weight_equation}
+C_{D_{in}}(v_i) = indegree(v_{i}) = |\{e_{ji}\}|
 \end{equation}
 
+If we consider the weight (i.e., probability) on edges, this yields the equation:
+\begin{equation}
+C_{W_{out}}(v_i) = \Sigma Prob(e_{ij})
+\end{equation}
+\begin{equation}
+C_{W_{in}}(v_i) = \Sigma Prob(e_{ji})
+\end{equation}
 
-It portrays how many direct one hop connections each node has to other nodes within the network. From the result, it could be used to find most connected, popular PII, which are likely to hold most information or can quickly connect with the wider network. 
+Figure ~\ref{fig:barchart_most_count} presents the top 10 PII in descending order based on the number of incoming and outgoing edges. The top three attributes with the highest number of incoming edges, i.e., most easily discoverable through incoming edges, are \textit{Name}, \textit{Credit Card Information}, and \textit{Date of Birth}. Also, the top three attributes with the highest number of outgoing edges, i.e., most likely able to reach the wide variety of PII through outgoing edges, are \textit{Customer Database}, \textit{Password}, and \textit{Email address}. Figure~\ref{fig:barchart_most_weight} shows the same statistics on the top 10 PII with most incoming and outgoing edges, with the difference that it considers the sum of weights on the edges instead of merely the edge count.
 
-Figure ~\ref{fig:barchart_most_count} presents the top 10 PII in descending order based on the number of incoming and outgoing edges. The top three attributes with the highest number of incoming edges, i.e., most easily discoverable through incoming edges, are \textit{Name}, \textit{Credit Card Information}, and \textit{Date of Birth}. Also, the top three attributes with the highest number of outgoing edges, i.e., most likely able to reach the wide variety of PII through outgoing edges, are \textit{Customer Database}, \textit{Password}, and \textit{Email address}. Figure~\ref{fig:barchart_most_weight} presents the same statistic on the top 10 PII with most incoming and outgoing edges, with the difference that it considers the sum of weights on the edges instead of merely the edge count. \textit{Name} still has the highest rank among PII able to be discovered from others through incoming edges. \textit{Customer database} still sits at the top of nodes with the highest outgoing degree, whether the count or the weight is considered.
+{\bf Insight:} \textit{Name} has the highest rank among PII discoverable from others through incoming edges and \textit{Customer database} sits at the top of nodes with the highest outgoing degree, whether the edge count or edge weight is considered.
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{barchart_most_count.png}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{barchart_most_count.png}
   \caption{A snapshot showing top 10 PII with most in and out degree count.}
   \label{fig:barchart_most_count}
 \end{figure}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{barchart_most_weight.png}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{barchart_most_weight.png}
   \caption{A snapshot showing top 10 PII with most in and out probability sum on edges.}
   \label{fig:barchart_most_weight}
 \end{figure}
@@ -146,84 +152,94 @@ Figure ~\ref{fig:barchart_most_count} presents the top 10 PII in descending orde
 \item Distribution Chart based on node risk and value
 \end{itemize}
 
-We examine the distribution based on risk and value of each attributes to better inspect the underlying trend for all properties. The chart is calculated by fixing linear interval size on x-axis and counting the amount of PII lying in each interval. Figure~\ref{fig:node_value_distribution} gives a snapshot for distribution chart for node value with interval unit of 100,000 in US Dollar value. We determine the loss value of a PII in ITAP by averaging out the identity theft cases in which that PII was breached as a source of entry. Since ITAP usually lacks the number of victims involved in a case, the loss value is not per victim. Figure~\ref{fig:node_risk_distribution} yields a result for node risk with interval size 0.001.
+We examine the distribution based on risk and value of each attributes to better understand the underlying trend for all properties. The chart is calculated by fixing linear interval size on x-axis and counting the number of PII lying in each interval. Figure~\ref{fig:node_value_distribution} gives a snapshot of the distribution chart for node value with interval unit of 100,000 in US Dollar value. According to the ITAP project\cite{ITAPDataSource}, ITAP determines the loss value of a PII  by averaging out the identity theft cases in which the PII was breached as a source of entry. Since ITAP usually lacks the number of victims involved in a case, the loss value is not per victim. Figure~\ref{fig:node_risk_distribution} yields a result for node risk with interval size 0.001.
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{node_value_distribution.png}
-  \caption{Distribution chart based on node value with interval size of 100,000\$.}
+{\bf Insight:} The vast majority of PII are valued at less than \$100,000 but have a risk of exposure of less than 0.001 too.
+
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{node_value_distribution.png}
+  \caption{Distribution chart based on node value with interval size of \$100,000.}
   \label{fig:node_value_distribution}
 \end{figure}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{node_risk_distribution.png}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{node_risk_distribution.png}
   \caption{Distribution chart based on node risk with interval size of 0.001.}
   \label{fig:node_risk_distribution}
 \end{figure}
 
 \begin{itemize}
-\item Scatter plot of Closeness v.s. Betweenness Centrality
+\item Scatter plot of Closeness vs. Betweenness Centrality
 \end{itemize}
 
-Freeman \cite{Freeman78centralityin} developed a set of measures for centrality based on betweenness. Later on, he proposed four core criteria, which developed into degree, closeness, betweenness, and eigenvector centrality  \cite{Freeman79centralityin}. We further leverage the concept of closeness and betweenness centrality to investigate Ecosystem graph.
+Freeman \cite{Freeman78centralityin} developed a set of measures for centrality based on betweenness. Later on, he proposed four core criteria, which developed into degree, closeness, betweenness, and eigenvector centrality  \cite{Freeman79centralityin}. We further leverage the concept of closeness and betweenness centrality to investigate the Ecosystem graph.
 
 \textbf{Closeness Centrality}
- It emphasize how close a vertex is to all other vertices in the topology -- the distance of a vertex to all others in the network by focusing on the geodesic measurement from each vertex to all others (Freeman \cite{Freeman79centralityin}). To be more specific, it calculates the shortest path between all nodes and assigns each node a score based on the length of its shortest paths to other nodes. According to Yin et al. \cite{Yin2006}, closeness is an evaluation for ``how long it will take information to spread from a given vertex to others in the network'' (p.1603), which helps find the PII attributes that are best placed to reach others once breached, and thus influence the entire network most efficiently. Also according to Freidkin \cite{Freidkin}, closeness centrality represents the independence in the sense that PII attributes with higher closeness centrality do not need to seek information from other more peripheral PII attributes. In our Ecosystem context, we define it as the `Information Acquisition Power' to present the ability the quickly access connected others.
-This yields the equation as follows. $C_{c}(v_{i})$ stands for the closeness centrality for vertex $i$ and $shortest(v_{i},v_{j})$ is the shortest path between two vertices:
+  emphasizes how close a vertex is to all other vertices in the topology -- the distance of a vertex to all others in the network by focusing on the geodesic measurement from each vertex to all others  \cite{Freeman79centralityin}. To be more specific, it calculates the shortest path between all nodes and assigns each node a score based on the length of its shortest paths to other nodes. According to Yin et al. \cite{Yin2006}, closeness is an evaluation for ``how long it will take information to spread from a given vertex to others in the network'' (p.1603), which helps find the PII attributes that are best placed to reach others once breached, and thus influence the entire network most efficiently. Consequently, closeness centrality in the identity ecosystem is a measure of {\bf Information Acquisition Power}. The highest it is for a PII attribute, the more power that PII attribute has in exploiting the entire identity ecosystem. Such PII attribute would only need few others to discover the whole network. Also according to Freidkin \cite{Freidkin}, closeness centrality represents the independence in the sense that PII attributes with higher closeness centrality do not need to seek information from other more peripheral PII attributes. 
+This yields the equation as follows. $C_{c}(v_{i})$ stands for the closeness centrality for vertex $i$ and $\alpha (i, j)$ is the number of the shortest paths between two vertices $v_i$ and $v_j$ (considering the number of edges and not edge weight):
 \begin{equation}
-C_{c}(v_{i}) = \sum_{j = 1}^{n} \frac{1}{shortest(v_{i}, v_{j})}
+C_{c}(v_{i}) = \sum_{j = 1}^{n} \frac{1}{\alpha (i, j)}
 \label{closeness_centrality_equation}
 \end{equation}
 
 \textbf{Betweenness Centrality}
-Betweenness centrality (Freeman \cite{Freeman79centralityin}) serves as an alternative concept of centrality focusing on control over the connections between other pairs of vertices. Betweenness centrality does this by identifying all the shortest paths and then aggregating how many times each node lies on one. Using $\alpha (i, j)$ as the number of different shortest $\langle i, j \rangle$ paths, and  $\alpha (i, u, j)$ as how many times the shortest path flows through $u$ ($ u \neq i, j$), the equation is as follows:
+Betweenness centrality  \cite{Freeman79centralityin} serves as an alternative concept of centrality focusing on control over the connections between other pairs of vertices. Betweenness centrality does this by identifying all the shortest paths and then aggregating how many times the node lies on one. Using $\alpha (i, j)$ as the number of different shortest $\langle i, j \rangle$ paths, and  $\alpha (i, u, j)$ as how many times the shortest path flows through $u$ ($ u \neq i, j$), the equation is as follows:
 \begin{equation}
 C_{B}(u) = \sum_{i \neq j \neq u}^{} \frac{\alpha (i, u, j) }{\alpha (i, j)}
 \label{betweenness_centrality}
 \end{equation}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{scatterplot_blue.png}
-  \caption{Scatter plot with high betweenness and high closeness.}
+
+
+Betweenness centrality recognizes nodes that act as `bridges' among whole and assesses the PII attributes that determine the flow around the system. Betweenness serves as a powerful characteristic for communication dynamics -- a high betweenness index could imply a node regulates collaboration in-between, holds authority over,  or infers periphery of diverse clusters. In our Ecosystem context, it measures how often a PII attribute is in the critical path of acquiring or discovering other PII, and hence measures {\bf Criticality}.
+
+
+
+
+We calculate the scatter plot of Information Acquisition power (y-axis) vs. Criticality (x-axis).  This plot could further be divided into four quadrants based on the combination of high and low values on x and y axes. Denoting C for Criticality (i.e., betweenness) and I for  Information Acquisition Power (i.e., closeness), Figure~\ref{fig:scatterplot_hbhc} shows the graph with blue dots representing high C and high I, Figure~\ref{fig:scatterplot_lbhc} with green dots low C and High I, Figure~\ref{fig:scatterplot_hblc} with red dots High C and low I, and lastly Figure~\ref{fig:scatterplot_lblc} with orange dots low C and low I\footnote{Low and high are indicating below and above average, respectively.}. 
+
+{\bf Insight:} Most of the data points maintain low information acquisition power and low criticality (Figure~\ref{fig:scatterplot_lblc}). There exists only few sparsely distributed data points, discussed in more details shortly, with both high criticality and high information acquisition power (Figure~\ref{fig:scatterplot_hbhc}). Such PII attributes are powerful in acquiring other PII and act as critical bottlenecks in the network of PII attributes. If evaluated using the Ecosystem model, these PII attributes could be asserted as attributes that will rapidly jeopardize the remaining sub-network if already exposed, and boost the information flow of exposure inside the system. Interestingly, there is only one data point with high criticality but low information acquisition power (Figure~\ref{fig:scatterplot_hblc}) and that is {\it Signature}.
+
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{scatterplot_blue.png}
+  \caption{Scatter plot with high betweenness (criticality) and high closeness (information acquisition power).}
   \label{fig:scatterplot_hbhc}
 \end{figure}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{scatterplot_green.png}
-  \caption{Scatter plot with low betweenness and high closeness.}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{scatterplot_green.png}
+  \caption{Scatter plot with low betweenness (criticality) and high closeness (information acquisition power).}
   \label{fig:scatterplot_lbhc}
 \end{figure}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{scatterplot_red.png}
-  \caption{Scatter plot with high betweenness and low closeness.}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{scatterplot_red.png}
+  \caption{Scatter plot with high betweenness (criticality) and low closeness (information acquisition power).}
   \label{fig:scatterplot_hblc}
 \end{figure}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{scatterplot_orange.png}
-  \caption{Scatter plot with low betweenness and low closeness.}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{scatterplot_orange.png}
+  \caption{Scatter plot with low betweenness (criticality) and low closeness (information acquisition power).}
   \label{fig:scatterplot_lblc}
 \end{figure}
 
-Betweenness centrality recognizes nodes that act as `bridges` among whole and assesses the PII attributes that determine the flow around the system. Betweenness serves as a powerful characteristic for communication dynamics -- a high betweenness index could imply a node regulates collaboration in-between, holds authority over,  or infers periphery of diverse clusters. In our Ecosystem context, we define it as the `Criticality' to present the ability to control over network flow.
 
+Figure~\ref{fig:top10_closeness_betweenness_centrality} displays the top 10 PII in descending order based on the value of information acquisition power and criticality.
 
+{\bf Insight:} The top three attributes with the highest value of information acquisition power are \textit{Email Address}, \textit{Name}, and \textit{Address}. The top three attributes with the highest value of criticality are \textit{Customer Database}, \textit{Password}, and \textit{Email Address}. 
 
-
-Following the centrality concept mentioned above, we calculate and introduce the scatter plot of x-axis revealing betweenness and y-axis showing closeness indexes.  This plot could further be divided into four quadrants based on the combination of high and low values on x and y axes. Denoting betweenness for `Criticality' (C) and closeness for `Information Acquisition Power' (I), Figure~\ref{fig:scatterplot_hbhc} shows the graph with blue dots representing high C and high I, Figure~\ref{fig:scatterplot_lbhc} with green dots low C and High I, Figure~\ref{fig:scatterplot_hblc} with red dots High C and low I, and lastly Figure~\ref{fig:scatterplot_lblc} with orange dots low C and low I. We can infer from these plots that most of the data points aggregate on the third quadrant, which maintains a low closeness and low betweenness centrality values (Figure~\ref{fig:scatterplot_lblc}). There exist Only few sparse distribution of points with both high betweenness and closeness centrality (Figure~\ref{fig:scatterplot_hbhc}). Such PII attributes hold high authority and act as broadcasters in the network of PII attributes. If evaluated using the Ecosystem model, these PII attributes could be asserted as attributes that will rapidly jeopardize the remaining sub-network if already exposed, and boost the information flow of exposure inside the system.
-
-
-Figure~\ref{fig:top10_closeness_betweenness_centrality} displays the top 10 PII in descending order based on the value of closeness and betweenness centrality. The top three attributes with the highest value of closeness, i.e., most efficient and least costly to spread information from and to, are \textit{Customer Database}, \textit{Password}, and \textit{Email Address}. Also, the top three attributes with the highest value of betweenness centrality, i.e., most authoritative for controlling the information flow, are \textit{Email Address}, \textit{Name}, and \textit{Address}. 
-
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth, height=6cm]{top10_closeness_betweenness_centrality.png}
-  \caption{A snapshot showing  top  10  PII  with  highest closeness and betweenness centrality values}
+\begin{figure}[ht!]
+  \includegraphics[width=\linewidth]{top10_closeness_betweenness_centrality.png}
+  \caption{A snapshot showing  top  10  PII  with  highest information acquisition power and criticality values.}
   \label{fig:top10_closeness_betweenness_centrality}
 \end{figure}
 
 \subsection{Strongly Connected Components}
-As we previously discussed, large portions of nodes are isolated from the rest of the Ecosystem. From those PII attributes with connections, we further identify attributes that are mutually coupled among themselves, which we define it as 'clusters'. Clusters serve as subsets that are dangerous sources for breaches, can quickly jeopardize other members in the group and confine the flow inside sub-network. 
-We propose the cluster to be a Strongly Connected Component (SCC) in the graph theory. A SCC of a directed graph $G = (V, E)$ is a maximal set of vertices $U \subseteq V$ such that for every pair of vertices $u$ and $v$ in $U$, both $u \mapsto v$ and $v \mapsto u$ hold, where $u \mapsto v$ means there is a directed path from u to v. Tarjan's classic serial algorithm for detection of SCCs runs linearly with respect to the number of edges and uses depth-first search. We apply  Tarjan's algorithm \cite{Tarjan} to compute the clusters. We found one cluster of 36 nodes which we display in Table~\ref{table:1}.
+In the current Identity Ecosystem, a large portion (\%65) of nodes is completely isolated from the rest of the Ecosystem. Among those PII attributes with connections, we further identify attributes that are mutually coupled among themselves, which we define as `clusters'. Clusters serve as subsets that are dangerous sources for breaches, can quickly jeopardize other members in the group and confine the flow inside sub-network. 
+We propose the cluster to be a Strongly Connected Component (SCC) in the graph theory. A SCC of a directed graph $G = (V, E)$ is a maximal set of vertices $U \subseteq V$ such that for every pair of vertices $u$ and $v$ in $U$, both $u \mapsto v$ and $v \mapsto u$ hold, where $u \mapsto v$ means there is a directed path from u to v. Consequently, in a cluster, there is a probability that every PII attribute can reveal every other PII and be revealed by every other PII. Tarjan's classic serial algorithm for detection of SCCs runs linearly with respect to the number of edges and uses depth-first search. We apply  Tarjan's algorithm \cite{Tarjan} to compute the clusters. We found one cluster of 36 nodes which we display in Table~\ref{table:1}.
+
+{\bf Insight:} Every PII in Table~\ref{table:1} has a probability of exposing every other PII in that table. 
 
 \begin{table*}[t!]
 \centering
@@ -263,59 +279,57 @@ We propose the cluster to be a Strongly Connected Component (SCC) in the graph t
 
 \section{Discussion of Results}
 
-In this section, we analyze the statistical results and give example takeaways from the above charts. Overall the Ecosystem contains 627 vertices. We can observe that a large portion of the nodes is not connected.  In fact,  65\% of nodes are fully isolated without any inbound or outbound  connections.  Only a small portion is considered to be important when breached or compromised, and one should make an effort to protect them. Among those with connections, we further observe the ranking by degree centrality to speculate candidates with most in-degree versus most out-degree, which could be interpreted as attributes that are most likely to get compromised, versus attributes that tend to spread information. 
+In this section, we analyze the statistical results and give example takeaways from the above charts. Overall the Ecosystem contains 627 vertices. We can observe that a large portion of the nodes is not connected to any other node.  In fact,  65\% of the nodes are fully isolated without any inbound or outbound  connections.  Only a small portion is considered to be important when breached or compromised, and one should make an effort to protect them. Among those with connections, we further observe the ranking by degree centrality to speculate candidates with most in-degree versus most out-degree, which could be interpreted as attributes that are most likely to get compromised, versus attributes that tend to spread information. 
 
-We further discover possible layout and structural features for the Identity Ecosystem graph by computing the SCC midst of the network. We extracted clusters, wherein each node is inter-reachable inside the sub-graph. For that 33\% with incoming and 7\% with outgoing PII nodes, overlapped 36 vertices constitute a huge component. 
+We further discover possible layout and structural features for the Identity Ecosystem graph by computing the SCC of the network. We extracted clusters, wherein each node is inter-reachable inside the sub-graph. Between that 33\% with incoming and 7\% with outgoing edge PII nodes, an overlap of 36 (about 5\%) vertices constitutes a big component. 
 
-We can assert our ecosystem model to be a sparse graph, where most attributes are unreachable, and laying on the outlier of the network. Only 5\% congregate together and serves as a central concern for our identity management.
+We can assert our ecosystem model to be a sparse graph, where most attributes are unreachable. Only 5\% congregate together and serves as a central concern for our identity management.
 
-We utilized closeness and betweenness centrality to better understand the influence in the topology.  Closeness measures the ability for a PII to retrieve information from and send information to others. Those PII attributes with high value can be viewed as `broadcaster' or `gossiper', which if breached, can put others in danger. Betweenness centrality is based on the assumption that a PII attribute may be exposing others if it presides over a path bottleneck. It also identifies the boundary spanner, which separates different communities and features. Those PII attributes with high value can be viewed as `bridge' or `broker', if one connecting component is breached, those can function as essential endpoints to protect the identity by not allowing information to flow through. 
+We utilized closeness and betweenness centrality to better understand the influence in the topology.  Closeness, or information acquisition power in this context,  measures the ability of a PII attribute to retrieve information from and send information to others. Those PII attributes with high value can be viewed as `broadcaster' or `gossiper', which if breached, can put others in danger. Betweenness, or criticality in this context, is based on the assumption that a PII attribute may be exposing others if it presides over a path bottleneck. It also identifies the boundary spanner, which separates different communities and features. Those PII attributes with high value can be viewed as `bridge' or `broker', if one connecting component is breached, those can function as essential endpoints to protect the identity by not allowing information to flow through. 
 
 Generally, previous studies indicate that centrality metrics are positively correlated \cite{Correlated} \cite{CorrelationCoefficient}. 
-Overall degree and closeness were strongly inter-correlated, while betweenness remained relatively uncorrelated with the other measures \cite{Bolland}. Combinations of centrality values represent certain topology and positional patterns (\cite{Donglei} p. 51). Given attributes with high degree and low closeness centrality, we can assert that the PII is embedded in the cluster and far away from others, whereas low betweenness infers that the PII holds redundant links where information just bypass it. Given attributes with a low degree and high closeness centrality, the PII ties with substantial or active others, whereas high betweenness indicates that PII is spanning few links, but with crucial influence on network flow. Low closeness and high betweenness combination results in specific PII monopolizes the ties from a small amount of PII to many others, while low betweenness and high closeness portray the PII locates in a dense, active cluster at the center of events with many others. We summarize different combination and its corresponding characteristics as in Table~\ref{table:2}.
+Overall degree and closeness were strongly inter-correlated, while betweenness remained relatively uncorrelated with the other measures \cite{Bolland}. Combinations of centrality values represent certain topology and positional patterns (\cite{Donglei} p. 51). Given attributes with high degree and low closeness centrality (information acquisition power), we can assert that the PII is embedded in the cluster and far away from others, whereas low betweenness (criticality) infers that the PII holds redundant links where information just bypass it. Given attributes with a low degree and high closeness centrality (information acquisition power), the PII ties with substantial or active others, whereas high betweenness (criticality) indicates that PII is spanning few links, but with crucial influence on network flow. Low closeness (information acquisition power) and high betweenness (criticality) combination results in specific PII monopolizing the ties from a small number of PII attributes to many others. We found a  prime example of such situation with {\it Signature}. Low betweenness (criticality) and high closeness (information acquisition power) portray the PII locates in a dense, active cluster at the center of events with many others. We summarize different combinations and their corresponding characteristics in Table~\ref{table:2}.
 
 \begin{table*}[t!]
 \centering
 \begin{tabular}{ |p{4cm}||p{4cm}|p{4cm}|p{4cm}|  }
  \hline
- \multicolumn{4}{|c|}{Combination for centrality metrics} \\
- \hline
-    & Low Degree & Low Closeness & Low Betweeness \\
+    & Low Degree & Low Closeness (Information Acquisition Power) & Low Betweenness (Criticality)\\
  \hline
  High Degree   & -    & Embed in a cluster which is faraway from others & PII with redundant connection - flow bypass \\
  \hline
- High Closeness &   Key PII connected to important and active others  & -   & Center PII located  in  a  dense,  active cluster at the center of events with many others \\
+ High Closeness (Information Acquisition Power) &   Key PII connected to important and active others  & -   & Center PII located  in  a  dense,  active cluster at the center of events with many others \\
  \hline
- High Betweeness & PII's few ties are crucial to network flow &  PII monopolizes
-the ties from a small number of PII to many others.  &  - \\
+ High Betweenness (Criticality) & PII's few ties are crucial to network flow &  PII monopolizes
+the ties from a small number of PII to many others  &  - \\
  \hline
 \end{tabular}
-\caption{Combination for centrality metrics.}
+\caption{Combinations of centrality metrics.}
 \label{table:2}
 \end{table*}
 
-\section{Related Works}
+\section{Related Work}
 
 In this section, we cover previous research that studies and surveys the statistics of identity theft. We can categorize previous work into three main sources: Federal and States agencies, private organizations and academic institutions.
 
-From government domain, Federal and State agencies, studies by U.S. department of Justice (Harrell \cite{Harrell}) release reports on distribution of identity theft victims. Also for United States General Accounting Office (USGAO \cite{USGAO}), Federal Trade Commission (FTC \cite{FTC}), Office of the Inspector General, Federal Bureau of Investigation (FBI), Postal Inspectors Office, and United States Secret Service (USSS) present studies for identity theft from different domains. For private organizations, Javelin \cite{Pascual} publishes comprehensive analysis and case studies about fraud detection and identity threat.
+From government sources, Federal and State agencies, studies by U.S. department of Justice (Harrell \cite{Harrell}) release reports on distribution of identity theft victims. Also United States General Accounting Office (USGAO \cite{USGAO}), Federal Trade Commission (FTC \cite{FTC}), Office of the Inspector General, Federal Bureau of Investigation (FBI), Postal Inspectors Office, and United States Secret Service (USSS) present studies on identity theft from different domains. 
 
-In the academia, Copes et al. \cite{Copes} analyzed report from National Public Survey on White Collar Crime and summarized financial-related fraudster behavior such as credit card fraud and bank account fraud. Allison et al. \cite{Allison} gathered data from agencies. They performed statistics analysis on victims and extracted demographic patterns of victims among the general U.S. population. Using Routine Activity Theory, Reyns \cite{Reyns} reported an empirical study of identity theft in the United Kingdom. Pratt et al.\cite{Pratt}, and Choo, \cite{Choo} also conducted studies utilizing Routine Activity Theory on different jurisdictions. 
+Among private organizations, Javelin \cite{Pascual} publishes comprehensive analysis and case studies about fraud detection and identity threat.
 
-Researchers have proposed various privacy visualization frameworks to assist data owners and collectors to communicate their privacy concerns. Usable Privacy Policy \cite{Cherivirala2016VisualizationAI} presents a visualizing website with a corpus of annotated privacy policies and facilitates the interactive exploration of a privacy policy's content. The Platform for Privacy Preferences \cite{FaithCranor2011} develops a presentation
-tool based on the Expandable Grid \cite{ExpandableGrid}, a visualization technique for displaying policies in an interactive matrix. Vaniea et al. proposed Prisimos \cite{Prisimos}, which displays the output of policy analysis and the source of the output in terms of the rule list and shows administrators the effect of their changes. It also allows users to step through each issue identified in the analysis viewing only details relevant to a specific issue. 
-
+In the academia, Copes et al. \cite{Copes} analyzed reports from National Public Survey on White Collar Crime and summarized financial-related fraudster behavior such as credit card fraud and bank account fraud. Allison et al. \cite{Allison} gathered data from agencies. They performed statistics analysis on victims and extracted demographic patterns of victims among the general U.S. population. Using Routine Activity Theory, Reyns \cite{Reyns} reported an empirical study of identity theft in the United Kingdom. Pratt et al.\cite{Pratt}, and Choo, \cite{Choo} also conducted studies utilizing Routine Activity Theory in different jurisdictions. 
 
  
-In studies, statistics results in existing providers and collectors are completely surveyed, however, those data sets were not fully constructed into a structured mathematical model and do not interact with graph theories and social network analysis measures. We feed data sets from ITAP and model the risk of exposure using Bayesian Network \cite{EcosystemModeling}. We are also one of the first to develop identity ecosystem into graph network and exploit the concept from three types of centrality and strongly connected components.  
+In these studies, statistic were presented. However, those data sets were not fully constructed into a structured mathematical model and do not interact with graph theoretic and social network analysis measures. We feed data sets from ITAP and model the risk of exposure using Bayesian Network \cite{EcosystemModeling}. We are also one of the first to develop identity ecosystem into graph network and exploit the concept from three types of centrality as well as strongly connected components.  
 
 \section{Conclusion}
 
-In this paper, we designed and implemented a visualization framework that assists data providers and collectors to comprehend and analyze the probabilistic graphical model of identity attributes. The visualization tool facilitates understanding of the whole risk model. Based on the Bayesian Network presentation of identity attributes, we developed traditional statistical charts such as histograms, scatter plots, and pie charts based on values for each PII to inspect the underlying distribution. Even though hundreds of PII constitute the whole system, a large amount is indeed isolated. Only a small portion of the PII is vulnerable to identity theft and one should make an effort to protect them.
+In this paper, we designed and implemented a visualization framework that assists data providers and collectors to comprehend and analyze the probabilistic graphical model of identity attributes. The visualization tool facilitates understanding of the whole risk model. Based on the Bayesian network presentation of identity attributes, we developed traditional statistical charts such as histograms, scatter plots, and pie charts based on values for each PII to inspect the underlying distribution. Even though hundreds of PII constitute the whole system, a large amount is indeed isolated. Only a small portion of the PII is vulnerable to identity theft and one should make an effort to protect them.
 
-To investigate the structural topology and correlation between PII, we further proposed to apply centrality measures such as degree, closeness, and betweenness centrality. We can then answer questions like: ``Inside the network, which PII is the one with most authority over the whole and which PII serves as a broadcaster for others to flow through?'', or ``how do we evaluate different aspects for risk and cost of exposure if certain PII is breached --  how central is it in the Identity Ecosystem?'' Moreover, in the results section, we discussed a combination of all the three centrality measures with high and low values. With these measures, we can estimate the hidden characteristics of the network. For instance, low betweenness and high closeness PII are located in a dense, active cluster at the center of events with many others.  Each PII can be categorized into a specific type, and hence portray a corresponding layout for the entire Identity Ecosystem.
+To investigate the structural topology and correlation between PII, we further proposed to apply centrality measures such as degree, closeness, and betweenness centrality. Moreover,  we discussed the combination of all the three centrality measures with high and low values. With these measures, we can estimate the hidden characteristics of the network.
 
-Lastly, we calculated Strongly Connected Components (SCC) to recognize groups of PII that are mutually reachable among themselves, which we defined as ``clusters''.  SCCs are subsets which are dangerous origins for breaches, can quickly jeopardize other PII in the group and constraint the flow inside the sub-network. In the current Identity Ecosystem, there is only one big cluster with 36 PII interconnected (out of the total of over 600 PII). We can again confirm  that as complex as the Identity Ecosystem is, a small portion is considered most threatening and risky.  As the ITAP project continues to collect data, theories and technologies developed from this research can be customized along the way to minimize our identities'  risk of exposure, maximize privacy, and optimize the spending to preserve privacy in nowadays society.
+Lastly, we calculated Strongly Connected Components (SCC) to recognize clusters of PII that are mutually reachable among themselves.  SCCs are subsets which are dangerous origins for breaches, can quickly jeopardize other PII in the group and constraint the flow inside the sub-network. In the current Identity Ecosystem, there is only one big cluster with 36 PII (5\% of the entire ecosystem) interconnected. We can again confirm  that as complex as the Identity Ecosystem is, a small portion is considered most threatening and risky. 
+
+As the ITAP project continues to collect data, theories and technologies developed from this research can be customized along the way to minimize our identities'  risk of exposure and maximize privacy.
 
 
 %\section{Acknowledgments}
