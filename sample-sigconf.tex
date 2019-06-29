@@ -19,37 +19,22 @@
 \title{Statistical  Analysis  of  Identity  Risk of Exposure  and  Cost  Using  the Ecosystem  of  Identity  Attributes
 }
 
-% \author{\IEEEauthorblockN{1\textsuperscript{st} Chia-Ju Chen}
-% \IEEEauthorblockA{\textit{Center for Identity} \\
-% \textit{University of Texas at Austin}\\
-% ju40268@utexas.edu}
-% \and
-% \IEEEauthorblockN{2\textsuperscript{nd} Razieh Nokhbeh Zaeem}
-% \IEEEauthorblockA{\textit{Center for Identity} \\
-% \textit{University of Texas at Austin}\\
-% razieh@identity.utexas.edu}
-% \and
-% \IEEEauthorblockN{3\textsuperscript{rd} K. Suzanne Barber}
-% \IEEEauthorblockA{\textit{Center for Identity} \\
-% \textit{University of Texas at Austin}\\
-% sbarber@identity.utexas.edu}
-% }
+ \author{\IEEEauthorblockN{1\textsuperscript{st} Chia-Ju Chen}
+ \IEEEauthorblockA{\textit{Center for Identity} \\
+ \textit{University of Texas at Austin}\\
+ ju40268@utexas.edu}
+ \and
+ \IEEEauthorblockN{2\textsuperscript{nd} Razieh Nokhbeh Zaeem}
+ \IEEEauthorblockA{\textit{Center for Identity} \\
+ \textit{University of Texas at Austin}\\
+ razieh@identity.utexas.edu}
+ \and
+ \IEEEauthorblockN{3\textsuperscript{rd} K. Suzanne Barber}
+ \IEEEauthorblockA{\textit{Center for Identity} \\
+ \textit{University of Texas at Austin}\\
+ sbarber@identity.utexas.edu}
+ }
 
-% \author{\IEEEauthorblockN{1\textsuperscript{st} ---}
-% \IEEEauthorblockA{\textit{---} \\
-% \textit{---}\\
-% ---}
-% \and
-% \IEEEauthorblockN{2\textsuperscript{nd} ---}
-% \IEEEauthorblockA{\textit{---} \\
-% \textit{---}\\
-% ---}
-% \and
-% \IEEEauthorblockN{3\textsuperscript{rd} ---}
-% \IEEEauthorblockA{\textit{---} \\
-% \textit{---}\\
-% ---}
-% }
 \maketitle
 
 \begin{abstract}
@@ -74,11 +59,15 @@ It provides a framework for understanding the value, risk and mutual relationshi
 For data source of ecosystem, The Identity Threat Assessment and Prediction (ITAP) \cite{ITAPDataSource} project is leveraged. ITAP is developed to focusing on gathering identity theft information from news stories, structuring this information, analyzing it, and discovering trends and characteristics.
 
 
-We obtained UT CID Identity Ecosystem and the ITAP data source from their authors. Based on this graph-based network of identity, we have designed and implemented a visualization framework that facilitates understanding of the whole risk network rather than reviewing unstructured raw news feed data from ITAP. We introduce three main statistical evaluation criteria: (1) Traditional pie, bar, and scatter plots of vertex or edge specific values are employed to show the distribution. (2) Centrality measures such as degree, closeness, and betweenness centrality are introduced and hence illustrate each PII with certain structural features. (3) Strongly Connected Components (SCC) are applied to distinguish groups of PII that are interconnected.  With these criteria, our visualization framework can prototype the identity system with detailed features such as PII that are most efficient to spread the information if breached, or PII that are aggregated as a group that will easily be traversed if one member is already compromised. The main contribution of this paper includes the visual representation for the Ecosystem and the three criteria for modeling the identity ecosystem.  
+We obtained UT CID Identity Ecosystem and the ITAP data source from their authors. Based on this graph-based network of identity, we have designed and implemented a visualization framework that facilitates understanding of the whole risk network rather than reviewing unstructured raw news feed data from ITAP. We introduce three main statistical evaluation criteria: (1) Traditional pie, bar, and scatter plots of vertex or edge specific values are employed to show the distribution. (2) Centrality measures such as degree, closeness, and betweenness centrality are introduced and hence illustrate each PII with certain structural features. (3) Strongly Connected Components (SCC) are applied to distinguish groups of PII that are interconnected.  With these criteria, our visualization framework can prototype the identity system with detailed features such as PII that are most efficient to spread the information if breached, or PII that are aggregated as a group that will easily be traversed if one member is already compromised. The main contribution of this paper includes the application of sophisticated graph theoretical concepts to reveal unprecedented insights into PII and the relationship between PII attributes.
 
 The remainder of this article is structured as follow. Section II elaborates on the importance of statistical analysis of the Ecosystem tool and the set of measurements to be included. Section III presents a comprehensive evaluation and takeaways from the results. Section IV includes the related work of the identity ecosystem, identity theft, and related government reports. Section V concludes the research and gives insights for future work.
 
 \section{Statistics Based on Ecosystem}
+
+Identity is the new currency. Today, it is virtually impossible to buy anything, access government services, enter an airport, a place of work, an amusement park or a computer network without providing identity information. Identity information is valuable–--valuable to the individual, to corporations, to government agencies but unfortunately valuable to criminals as well. Privacy and security are vital to protect these valuable identity assets. To protect an asset we must know that asset. To protect identity information currency assets, we must know the complete inventory of those assets.
+
+Leveraging the empirical ITAP data, the UT CID Identity Ecosystem project is building the canonical inventory describing different types of identity assets, the valuation of those assets and the connectedness of those assets that produces a type physics in the Identity Ecosystem. Identity assets cannot be treated as a simple ``list of data'' but must be managed as a complex and dependent network of assets with different entry points, vulnerabilities and ever-changing values and risk. A deeper understanding of this network of identity assets will result in a better understanding of how to protect, use, and monetize (for the legitimate reasons) these identity assets.
 
 The Identity Ecosystem is a valuable previously implemented tool that models identity liaison, analyzes identity fraud and breaches, and answers several questions about identity risk management \cite{EcosystemModeling}. It maps identity attributes in a probabilistic model and performs Bayesian network-based inference to determine the posterior effects on each attribute. The Identity Ecosystem models individual identity attributes as nodes whereas edges in-between indicate various types of connections.
  
@@ -90,15 +79,11 @@ Each vertex includes different properties such as type of node, risk of exposure
   \label{fig:ecosystem_whole}
 \end{figure}
 
-The Identity Ecosystem takes ITAP’s output as its input. Identity Threat Assessment and Prediction (ITAP) is a risk assessment framework that characterize the of process for identity theft and patterns of vulnerabilities \cite{ITAP}. ITAP captures instances of identity crime from diverse sources, further aggregates this data to portrait the identity vulnerabilities, the value of identity attributes, and their risk of exposure.
+{\color{red} 1. ENTER SUMMARY OF ITAP HERE}
 
-Continually collecting raw text data from various sources of news feeds stories, ITAP
-aims to determine the approaches and resources actually used to carry out identity crimes; the vulnerabilities that were exploited during the process; as well as the consequences according to these incidents for the individual victims, in terms of the organizations affected and the perpetrators involved.
-The ITAP database is a comprehensive, structured, and continually growing repository of such information, with approximately more than 5,000 incidents captured up to now. The cases span from 2000 to 2018. The version of data set we are using is 2017 version and it was extracted in May, 2018.
+{\color{red} 2. Reword the following questions without graph jargon (nodes/edges)}
 
-%  The research questions we seek to answer in this paper are that ``Given a graph-based network of identity, what are the underlying characteristics? Are PII forming groups or clusters? If so, what are the isolated PII nodes and connected ones?''. We would also want to answer ``Inside the network, which PII is in the critical path of obtaining others most often and which PII can influence the acquisition of the other PII?''. We further observe questions such as: ``In the PII graph, where is the PII located? Is it connected with lots of dangerous neighboring PII? Or is it placed on the boundary of a cluster?''.
-
-The research questions we seek to answer in this paper are that ``Given a real-world network of identity, what are the underlying characteristics? Among large amount of PII, what are the ones that are most possible sources for breaches?''. Also ``If a certain PII is compromised, what is the cost for it to acquire all the other accessible PII?''. For real world analogy, if the name of a person is exposed, what is the cost for the identity theft to collect the indivial
+ The research questions we seek to answer in this paper are that ``In a graph-based network of identity, what are the underlying characteristics? Are PII forming groups or clusters? If so, what are the isolated PII nodes and connected ones?''. We would also want to answer ``Inside the network, which PII is in the critical path of obtaining others most often and which PII can influence the acquisition of the other PII?''. We further observe questions such as: ``In the PII graph, where is the PII located? Is it connected with lots of dangerous neighboring PII? Or is it placed on the boundary of a cluster?''.
 
 We focus on three statistical indices on the given data set: (1) Bar, pie, and distribution charts based on the node or edge value (2) Centrality measurement including node specific in and out-degree centrality, betweenness centrality, and closeness centrality and (3) Strongly connected  components of nodes for identifying clusters. Based on the results, a comprehensive discussion is presented about possible breaches with more important attributes, and flow of personal information inside the network modeling the real-world information movement. 
 
@@ -340,17 +325,9 @@ Lastly, we calculated Strongly Connected Components (SCC) to recognize clusters 
 As the ITAP project continues to collect data, theories and technologies developed from this research can be customized along the way to minimize our identities'  risk of exposure and maximize privacy.
 
 
-%\section{Acknowledgments}
+\section*{Acknowledgments}
 
-%We wish to thank the Center for Identity Partners (\url{https://identity.utexas.edu/strategic-partners}) for their contributions to this research effort.
-
-%\section{Appendices}
-%
-% The acknowledgments section is defined using the "acks" environment (and NOT an unnumbered section). This ensures
-% the proper identification of the section in the article metadata, and the consistent spelling of the heading.
-% \begin{acks}
-% To Robert, for the bagels and explaining CMYK and color spaces.
-% \end{acks}
+We wish to thank the Center for Identity Partners (\url{https://identity.utexas.edu/strategic-partners}) for their contributions to this research effort.
 
 %
 % The next two lines define the bibliography style to be used, and the bibliography file.
